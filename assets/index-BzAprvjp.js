@@ -2203,7 +2203,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   color: ${b.cream};
   font-size: 1.8rem;
   font-weight: 700;
-  margin-top: 4px;
+  margin-top: -4px;
 
   @media (min-width: ${J.tablet}) {
     font-size: 1.5rem;
@@ -3185,19 +3185,27 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   }
 `,hD=w.div`
   position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 85px;
+  right: 12px;
   background: linear-gradient(135deg, ${b.gold}, #D4A84B);
   color: ${b.darkBrown};
-  padding: 14px 24px;
-  border-radius: 30px;
+  padding: 8px 14px;
+  border-radius: 20px;
   font-weight: 700;
-  font-size: 14px;
-  box-shadow: 0 4px 20px rgba(230, 201, 86, 0.5);
+  font-size: 11px;
+  box-shadow: 0 4px 15px rgba(230, 201, 86, 0.5);
   z-index: 200;
   cursor: pointer;
   white-space: nowrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border: 6px solid transparent;
+    border-top-color: #D4A84B;
+  }
 
   @media (min-width: ${J.tablet}) {
     display: none;

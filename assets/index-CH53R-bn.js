@@ -2155,7 +2155,7 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   padding: 20px 14px;
   background: rgba(253, 249, 238, 0.03);
@@ -2163,7 +2163,6 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
   border-radius: 20px;
   animation: ${LM} 2s ease-in-out infinite;
   width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
 
@@ -2171,7 +2170,6 @@ Please change the parent <Route path="${z}"> to <Route path="${z==="/"?"*":`${z}
     padding: 30px;
     border: 3px solid ${b.gold};
     border-radius: 24px;
-    height: auto;
     justify-content: center;
     gap: 0;
   }

@@ -3170,9 +3170,10 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
 `,fD=w.div`
   display: flex;
   gap: 10px;
-  padding: 16px 0;
+  padding: 6px 0;
   flex-shrink: 0;
-  margin-top: 16px;
+  margin-top: 6px;
+  position: relative;
 
   @media (min-width: ${J.tablet}) {
     display: none;
@@ -3184,17 +3185,24 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     display: block;
   }
 `,hD=w.div`
-  position: fixed;
-  bottom: 85px;
-  right: 12px;
+  position: absolute;
+  bottom: 100%;
+  right: calc(12.5% - 50px);
+  margin-bottom: 6px;
+  z-index: 200;
+
+  @media (min-width: ${J.tablet}) {
+    display: none;
+  }
+`,pD=w.div`
+  position: relative;
   background: linear-gradient(135deg, ${b.gold}, #D4A84B);
   color: ${b.darkBrown};
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 6px 10px;
+  border-radius: 14px;
   font-weight: 700;
-  font-size: 11px;
-  box-shadow: 0 4px 15px rgba(230, 201, 86, 0.5);
-  z-index: 200;
+  font-size: 9px;
+  box-shadow: 0 3px 12px rgba(230, 201, 86, 0.5);
   cursor: pointer;
   white-space: nowrap;
 
@@ -3202,12 +3210,9 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
     content: '';
     position: absolute;
     top: 100%;
-    right: 20px;
-    border: 6px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
     border-top-color: #D4A84B;
   }
-
-  @media (min-width: ${J.tablet}) {
-    display: none;
-  }
-`,pD=()=>{const[n,a]=j.useState(!0),{setInviteModalOpen:o}=nn(),l=()=>{a(!1),o(!0)};return h.jsxs(F$,{children:[h.jsx(I8,{}),n&&h.jsx(hD,{onClick:l,children:"Increase Winning Chances!"}),h.jsxs(J$,{children:[h.jsx(mD,{}),h.jsx(uD,{children:h.jsx(Q1,{})}),h.jsx(fD,{children:h.jsx(tx,{isMobile:!0})}),h.jsxs(W$,{children:[h.jsx(I$,{children:h.jsx(AM,{})}),h.jsx(tD,{children:h.jsx(Q1,{})}),h.jsx(eD,{children:h.jsx(dD,{children:h.jsx(n$,{})})})]}),h.jsxs(nD,{children:[h.jsx(iD,{children:h.jsx(tx,{})}),h.jsx(aD,{children:h.jsx(D$,{})})]})]}),h.jsx(P$,{}),h.jsx(K$,{}),h.jsx(Q$,{}),h.jsx(Z$,{})]})},mD=()=>{const{player:n,pool:a}=nn(),[o,l]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const f=new Date;f.setDate(f.getDate()+2),f.setHours(20,0,0,0);const d=()=>{const g=f-new Date;if(g>0){const v=Math.floor(g/36e5),x=Math.floor(g%(1e3*60*60)/(1e3*60)),T=Math.floor(g%(1e3*60)/1e3);l({hours:v,minutes:x,seconds:T})}};d();const p=setInterval(d,1e3);return()=>clearInterval(p)},[]);const c=f=>f.toString().padStart(2,"0");return h.jsxs(rD,{children:[h.jsx(oD,{src:n.avatar,alt:n.username}),h.jsxs(lD,{children:[h.jsx(sD,{children:"Next Draw"}),h.jsxs(cD,{children:[c(o.hours),":",c(o.minutes),":",c(o.seconds)]})]})]})},gD=()=>h.jsx(H8,{children:h.jsx(pD,{})}),yD=()=>h.jsxs(h.Fragment,{children:[h.jsx(i6,{}),h.jsxs("main",{children:[h.jsx(z6,{}),h.jsx(Y6,{}),h.jsx(eA,{}),h.jsx(xA,{}),h.jsx(_A,{}),h.jsx(a8,{}),h.jsx(S8,{})]}),h.jsx(k8,{}),h.jsx(L8,{}),h.jsx(N8,{})]});function xD(){return h.jsx(W3,{basename:"/moneypools-landing",children:h.jsxs(s5,{children:[h.jsx(uT,{}),h.jsxs(M3,{children:[h.jsx(ld,{path:"/",element:h.jsx(yD,{})}),h.jsx(ld,{path:"/dashboard",element:h.jsx(gD,{})})]})]})})}zw.createRoot(document.getElementById("root")).render(h.jsx(j.StrictMode,{children:h.jsx(xD,{})}));
+`,mD=()=>{const[n,a]=j.useState(!0),{setInviteModalOpen:o}=nn(),l=()=>{a(!1),o(!0)};return h.jsxs(F$,{children:[h.jsx(I8,{}),h.jsxs(J$,{children:[h.jsx(gD,{}),h.jsx(uD,{children:h.jsx(Q1,{})}),h.jsxs(fD,{children:[h.jsx(tx,{isMobile:!0}),n&&h.jsx(hD,{children:h.jsx(pD,{onClick:l,children:"Increase Winning Chances!"})})]}),h.jsxs(W$,{children:[h.jsx(I$,{children:h.jsx(AM,{})}),h.jsx(tD,{children:h.jsx(Q1,{})}),h.jsx(eD,{children:h.jsx(dD,{children:h.jsx(n$,{})})})]}),h.jsxs(nD,{children:[h.jsx(iD,{children:h.jsx(tx,{})}),h.jsx(aD,{children:h.jsx(D$,{})})]})]}),h.jsx(P$,{}),h.jsx(K$,{}),h.jsx(Q$,{}),h.jsx(Z$,{})]})},gD=()=>{const{player:n,pool:a}=nn(),[o,l]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const f=new Date;f.setDate(f.getDate()+2),f.setHours(20,0,0,0);const d=()=>{const g=f-new Date;if(g>0){const v=Math.floor(g/36e5),x=Math.floor(g%(1e3*60*60)/(1e3*60)),T=Math.floor(g%(1e3*60)/1e3);l({hours:v,minutes:x,seconds:T})}};d();const p=setInterval(d,1e3);return()=>clearInterval(p)},[]);const c=f=>f.toString().padStart(2,"0");return h.jsxs(rD,{children:[h.jsx(oD,{src:n.avatar,alt:n.username}),h.jsxs(lD,{children:[h.jsx(sD,{children:"Next Draw"}),h.jsxs(cD,{children:[c(o.hours),":",c(o.minutes),":",c(o.seconds)]})]})]})},yD=()=>h.jsx(H8,{children:h.jsx(mD,{})}),xD=()=>h.jsxs(h.Fragment,{children:[h.jsx(i6,{}),h.jsxs("main",{children:[h.jsx(z6,{}),h.jsx(Y6,{}),h.jsx(eA,{}),h.jsx(xA,{}),h.jsx(_A,{}),h.jsx(a8,{}),h.jsx(S8,{})]}),h.jsx(k8,{}),h.jsx(L8,{}),h.jsx(N8,{})]});function vD(){return h.jsx(W3,{basename:"/moneypools-landing",children:h.jsxs(s5,{children:[h.jsx(uT,{}),h.jsxs(M3,{children:[h.jsx(ld,{path:"/",element:h.jsx(xD,{})}),h.jsx(ld,{path:"/dashboard",element:h.jsx(yD,{})})]})]})})}zw.createRoot(document.getElementById("root")).render(h.jsx(j.StrictMode,{children:h.jsx(vD,{})}));

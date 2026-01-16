@@ -371,9 +371,13 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 120px 24px 80px;
+  padding: 80px 24px 60px;
   background: ${b.darkBrown};
   overflow: hidden;
+
+  @media (min-width: ${J.tablet}) {
+    padding: 120px 24px 80px;
+  }
 `,y6=w.div`
   position: absolute;
   width: 800px;

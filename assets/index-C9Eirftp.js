@@ -439,7 +439,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,T6=w(I.p)`
+`,T6=w.br`
+  display: none;
+
+  @media (min-width: ${J.tablet}) {
+    display: block;
+  }
+`,j6=w(I.p)`
   font-size: clamp(1rem, 2.5vw, 1.15rem);
   color: ${b.cream};
   margin-bottom: 36px;
@@ -447,7 +453,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   margin-left: auto;
   margin-right: auto;
   opacity: 0.8;
-`,j6=w(I.div)`
+`,C6=w(I.div)`
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -468,32 +474,32 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   letter-spacing: 2px;
   margin-bottom: 8px;
   opacity: 0.7;
-`,C6=w.div`
+`,E6=w.div`
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
   color: ${b.gold};
   font-family: 'Poppins', sans-serif;
-`,M1=w(C6)`
+`,M1=w(E6)`
   font-size: clamp(2.5rem, 6vw, 3.2rem);
   text-shadow: 0 0 30px ${b.gold}60, 0 0 60px ${b.gold}30;
-`,E6=w(I.div)`
+`,A6=w(I.div)`
   margin-top: 32px;
   z-index: 10;
   text-align: center;
-`,A6=w.div`
+`,M6=w.div`
   font-size: 12px;
   color: ${b.cream};
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 12px;
   opacity: 0.7;
-`,M6=w.div`
+`,$6=w.div`
   display: inline-flex;
   align-items: center;
   background: ${b.red};
   padding: 10px 19px;
   border-radius: 10px;
-`,$6=w.div`
+`,D6=w.div`
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 800;
   color: ${b.cream};
@@ -508,7 +514,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     margin-right: 8px;
     letter-spacing: 0;
   }
-`,D6=w(I.button)`
+`,z6=w(I.button)`
   position: relative;
   z-index: 1;
   padding: 18px 48px;
@@ -532,20 +538,20 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     padding: 20px 56px;
     font-size: 20px;
   }
-`,Ff=["Community","Movement","Family","Network"],z6=()=>{const n=ir(),{playerCount:a,jackpot:o}=Ls(),[l,c]=j.useState(a),[f,d]=j.useState(o),[p,m]=j.useState(0);j.useEffect(()=>{const R=setInterval(()=>{m(N=>(N+1)%Ff.length)},3e3);return()=>clearInterval(R)},[]);const[g]=j.useState(()=>{const R=new Date;return R.setDate(R.getDate()+2),R.setHours(20,0,0,0),R}),[v,x]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const N=l,k=f,O=a-N,K=o-k,P=Date.now(),Q=()=>{const U=Date.now()-P,F=Math.min(U/400,1),lt=1-Math.pow(1-F,3);c(Math.round(N+O*lt)),d(Math.round(k+K*lt)),F<1&&requestAnimationFrame(Q)};requestAnimationFrame(Q)},[a,o]),j.useEffect(()=>{const R=()=>{const O=g-new Date;if(O>0){const K=Math.floor(O/36e5),P=Math.floor(O%(1e3*60*60)/(1e3*60)),Q=Math.floor(O%(1e3*60)/1e3);x({hours:K,minutes:P,seconds:Q})}};R();const N=setInterval(()=>{R()},1e3);return()=>clearInterval(N)},[g]);const T=R=>R.toString().padStart(2,"0"),C=R=>R.toLocaleString(),D=R=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",minimumFractionDigits:0,maximumFractionDigits:0}).format(R),$=()=>{n("/dashboard")};return h.jsxs(g6,{id:"hero",children:[h.jsx(y6,{}),h.jsx(s6,{}),h.jsx(h6,{}),h.jsxs(x6,{initial:{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:.8},children:[h.jsx(v6,{src:"/moneypools-landing/images/05.png",alt:"","aria-hidden":"true"}),h.jsxs(b6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.2},children:["The First"," ",h.jsx(en,{mode:"wait",children:h.jsx(S6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},exit:{opacity:0,y:-20},transition:{duration:.3},children:Ff[p]},Ff[p])}),h.jsx(w6,{})," That Makes",h.jsx("br",{}),"Millionaires"]}),h.jsx(T6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.3},children:"No numbers to pick. No luck needed. Every draw has guaranteed winners, powered by a community that wins together. It's your turn."}),h.jsxs(j6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.4},children:[h.jsxs(E1,{children:[h.jsx(A1,{children:"Players in Pool"}),h.jsx(M1,{children:C(l)})]}),h.jsxs(E1,{children:[h.jsx(A1,{children:"Current Jackpot"}),h.jsx(M1,{children:D(f)})]})]}),h.jsx(I.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.5},children:h.jsx(D6,{onClick:$,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Join Now"})})]}),h.jsxs(E6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.6},children:[h.jsx(A6,{children:"Next Draw In"}),h.jsx(M6,{children:h.jsxs($6,{children:[T(v.hours),h.jsx("span",{children:"h"})," : ",T(v.minutes),h.jsx("span",{children:"min"})," : ",T(v.seconds),h.jsx("span",{children:"sec"})]})})]})]})},R6=w.section`
+`,Ff=["Community","Movement","Family","Network"],R6=()=>{const n=ir(),{playerCount:a,jackpot:o}=Ls(),[l,c]=j.useState(a),[f,d]=j.useState(o),[p,m]=j.useState(0);j.useEffect(()=>{const R=setInterval(()=>{m(N=>(N+1)%Ff.length)},3e3);return()=>clearInterval(R)},[]);const[g]=j.useState(()=>{const R=new Date;return R.setDate(R.getDate()+2),R.setHours(20,0,0,0),R}),[v,x]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const N=l,k=f,O=a-N,K=o-k,P=Date.now(),Q=()=>{const U=Date.now()-P,F=Math.min(U/400,1),lt=1-Math.pow(1-F,3);c(Math.round(N+O*lt)),d(Math.round(k+K*lt)),F<1&&requestAnimationFrame(Q)};requestAnimationFrame(Q)},[a,o]),j.useEffect(()=>{const R=()=>{const O=g-new Date;if(O>0){const K=Math.floor(O/36e5),P=Math.floor(O%(1e3*60*60)/(1e3*60)),Q=Math.floor(O%(1e3*60)/1e3);x({hours:K,minutes:P,seconds:Q})}};R();const N=setInterval(()=>{R()},1e3);return()=>clearInterval(N)},[g]);const T=R=>R.toString().padStart(2,"0"),C=R=>R.toLocaleString(),D=R=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",minimumFractionDigits:0,maximumFractionDigits:0}).format(R),$=()=>{n("/dashboard")};return h.jsxs(g6,{id:"hero",children:[h.jsx(y6,{}),h.jsx(s6,{}),h.jsx(h6,{}),h.jsxs(x6,{initial:{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:.8},children:[h.jsx(v6,{src:"/moneypools-landing/images/05.png",alt:"","aria-hidden":"true"}),h.jsxs(b6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.2},children:["The First"," ",h.jsx(en,{mode:"wait",children:h.jsx(S6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},exit:{opacity:0,y:-20},transition:{duration:.3},children:Ff[p]},Ff[p])}),h.jsx(w6,{})," That",h.jsx(T6,{})," Makes Millionaires"]}),h.jsx(j6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.3},children:"No numbers to pick. No luck needed. Every draw has guaranteed winners, powered by a community that wins together. It's your turn."}),h.jsxs(C6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.4},children:[h.jsxs(E1,{children:[h.jsx(A1,{children:"Players in Pool"}),h.jsx(M1,{children:C(l)})]}),h.jsxs(E1,{children:[h.jsx(A1,{children:"Current Jackpot"}),h.jsx(M1,{children:D(f)})]})]}),h.jsx(I.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.5},children:h.jsx(z6,{onClick:$,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Join Now"})})]}),h.jsxs(A6,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6,delay:.6},children:[h.jsx(M6,{children:"Next Draw In"}),h.jsx($6,{children:h.jsxs(D6,{children:[T(v.hours),h.jsx("span",{children:"h"})," : ",T(v.minutes),h.jsx("span",{children:"min"})," : ",T(v.seconds),h.jsx("span",{children:"sec"})]})})]})]})},O6=w.section`
   padding: 100px 24px;
   background: ${b.darkBrown};
   position: relative;
   overflow: hidden;
-`,O6=w.div`
+`,k6=w.div`
   max-width: 1100px;
   margin: 0 auto;
-`,k6=w(I.h2)`
+`,B6=w(I.h2)`
   font-size: clamp(2rem, 5vw, 3rem);
   color: ${b.cream};
   text-align: center;
   margin-bottom: 64px;
-`,B6=w.div`
+`,N6=w.div`
   display: none;
 
   @media (min-width: ${J.tablet}) {
@@ -553,7 +559,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
-`,N6=w.div`
+`,L6=w.div`
   display: block;
   overflow: hidden;
   position: relative;
@@ -561,24 +567,24 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,L6=w(I.div)`
+`,_6=w(I.div)`
   display: flex;
   cursor: grab;
 
   &:active {
     cursor: grabbing;
   }
-`,_6=w.div`
+`,V6=w.div`
   min-width: 100%;
   padding: 0 12px;
   box-sizing: border-box;
   display: flex;
-`,V6=w.div`
+`,U6=w.div`
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 24px;
-`,U6=w.button`
+`,H6=w.button`
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -601,7 +607,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   flex-direction: column;
   flex: 1;
   width: 100%;
-`,H6=wt`
+`,Y6=wt`
   0% { transform: translateY(0); }
   100% { transform: translateY(-1232px); }
 `,D1=w.div`
@@ -624,7 +630,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   top: 0;
   left: 50%;
   margin-left: -77px;
-  animation: ${n=>n.$isSpinning?H6:"none"} 0.35s linear infinite;
+  animation: ${n=>n.$isSpinning?Y6:"none"} 0.35s linear infinite;
   transform: translateY(${n=>n.$finalPosition}px);
   transition: ${n=>n.$isSpinning?"none":"transform 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)"};
 `,as=w(I.img)`
@@ -667,27 +673,27 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.cream};
   opacity: 0.8;
   line-height: 1.6;
-`,Y6=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(!1),[c,f]=j.useState([!1,!1,!1]),[d,p]=j.useState([!1,!1,!1]),[m,g]=j.useState(0),v=["/moneypools-landing/images/01.png","/moneypools-landing/images/03.png","/moneypools-landing/images/04.png","/moneypools-landing/images/05.png","/moneypools-landing/images/06.png","/moneypools-landing/images/07.png","/moneypools-landing/images/08.png","/moneypools-landing/images/09.png"],x=[{number:1,title:"Subscribe",description:"Pick a pool, subscribe, and you're in every draw. No tickets, no numbers to pick.",avatar:"/moneypools-landing/images/01.png",targetIndex:0},{number:2,title:"Watch Jackpots Grow",description:"Every new player increases the prize. More players = bigger winnings for you.",avatar:"/moneypools-landing/images/03.png",targetIndex:1},{number:3,title:"Start Winning!",description:"Every 3 days, one player wins the entire jackpot. No rollovers. 50K players = €50K prize.",avatar:"/moneypools-landing/images/05.png",targetIndex:3}],T=k=>-(k*154),C=()=>{l(!0),f([!0,!0,!0]),p([!1,!1,!1]),setTimeout(()=>{f([!1,!0,!0]),p([!0,!1,!1])},500),setTimeout(()=>{f([!1,!1,!0]),p([!0,!0,!1])},750),setTimeout(()=>{f([!1,!1,!1]),p([!0,!0,!0])},1e3)},D=()=>{l(!1),p([!1,!1,!1])},$={hidden:{},visible:{transition:{staggerChildren:.2}}},R={hidden:{opacity:0,y:50},visible:{opacity:1,y:0,transition:{duration:.6}}},N=(k,O)=>{O.offset.x<-50&&m<x.length-1?g(m+1):O.offset.x>50&&m>0&&g(m-1)};return h.jsx(R6,{id:"how-it-works",ref:n,children:h.jsxs(O6,{onMouseEnter:C,onMouseLeave:D,children:[h.jsx(k6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"How It Works"}),h.jsx(B6,{as:I.div,variants:$,initial:"hidden",animate:a?"visible":"hidden",children:x.map((k,O)=>h.jsxs($1,{variants:R,children:[h.jsx(D1,{children:d[O]?h.jsx(R1,{initial:{scale:0,opacity:0},animate:{scale:1,opacity:1},transition:{type:"spring",stiffness:300,damping:20},children:"WIN!"}):h.jsxs(z1,{$isSpinning:c[O],$finalPosition:T(k.targetIndex),children:[v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},P)),v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},`duplicate-${P}`))]})}),h.jsxs(O1,{children:["Step ",k.number]}),h.jsx(k1,{children:k.title}),h.jsx(B1,{children:k.description})]},k.number))}),h.jsxs(N6,{onTouchStart:C,onTouchEnd:D,children:[h.jsx(L6,{drag:"x",dragConstraints:{left:0,right:0},dragElastic:.2,onDragEnd:N,animate:{x:`-${m*100}%`},transition:{type:"spring",stiffness:300,damping:30},children:x.map((k,O)=>h.jsx(_6,{children:h.jsxs($1,{as:I.div,initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.2},children:[h.jsx(D1,{children:d[O]?h.jsx(R1,{initial:{scale:0,opacity:0},animate:{scale:1,opacity:1},transition:{type:"spring",stiffness:300,damping:20},children:"WIN!"}):h.jsxs(z1,{$isSpinning:c[O],$finalPosition:T(k.targetIndex),children:[v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},P)),v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},`duplicate-${P}`))]})}),h.jsxs(O1,{children:["Step ",k.number]}),h.jsx(k1,{children:k.title}),h.jsx(B1,{children:k.description})]})},k.number))}),h.jsx(V6,{children:x.map((k,O)=>h.jsx(U6,{$active:m===O,onClick:()=>g(O)},O))})]})]})})},G6=wt`
+`,G6=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(!1),[c,f]=j.useState([!1,!1,!1]),[d,p]=j.useState([!1,!1,!1]),[m,g]=j.useState(0),v=["/moneypools-landing/images/01.png","/moneypools-landing/images/03.png","/moneypools-landing/images/04.png","/moneypools-landing/images/05.png","/moneypools-landing/images/06.png","/moneypools-landing/images/07.png","/moneypools-landing/images/08.png","/moneypools-landing/images/09.png"],x=[{number:1,title:"Subscribe",description:"Pick a pool, subscribe, and you're in every draw. No tickets, no numbers to pick.",avatar:"/moneypools-landing/images/01.png",targetIndex:0},{number:2,title:"Watch Jackpots Grow",description:"Every new player increases the prize. More players = bigger winnings for you.",avatar:"/moneypools-landing/images/03.png",targetIndex:1},{number:3,title:"Start Winning!",description:"Every 3 days, one player wins the entire jackpot. No rollovers. 50K players = €50K prize.",avatar:"/moneypools-landing/images/05.png",targetIndex:3}],T=k=>-(k*154),C=()=>{l(!0),f([!0,!0,!0]),p([!1,!1,!1]),setTimeout(()=>{f([!1,!0,!0]),p([!0,!1,!1])},500),setTimeout(()=>{f([!1,!1,!0]),p([!0,!0,!1])},750),setTimeout(()=>{f([!1,!1,!1]),p([!0,!0,!0])},1e3)},D=()=>{l(!1),p([!1,!1,!1])},$={hidden:{},visible:{transition:{staggerChildren:.2}}},R={hidden:{opacity:0,y:50},visible:{opacity:1,y:0,transition:{duration:.6}}},N=(k,O)=>{O.offset.x<-50&&m<x.length-1?g(m+1):O.offset.x>50&&m>0&&g(m-1)};return h.jsx(O6,{id:"how-it-works",ref:n,children:h.jsxs(k6,{onMouseEnter:C,onMouseLeave:D,children:[h.jsx(B6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"How It Works"}),h.jsx(N6,{as:I.div,variants:$,initial:"hidden",animate:a?"visible":"hidden",children:x.map((k,O)=>h.jsxs($1,{variants:R,children:[h.jsx(D1,{children:d[O]?h.jsx(R1,{initial:{scale:0,opacity:0},animate:{scale:1,opacity:1},transition:{type:"spring",stiffness:300,damping:20},children:"WIN!"}):h.jsxs(z1,{$isSpinning:c[O],$finalPosition:T(k.targetIndex),children:[v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},P)),v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},`duplicate-${P}`))]})}),h.jsxs(O1,{children:["Step ",k.number]}),h.jsx(k1,{children:k.title}),h.jsx(B1,{children:k.description})]},k.number))}),h.jsxs(L6,{onTouchStart:C,onTouchEnd:D,children:[h.jsx(_6,{drag:"x",dragConstraints:{left:0,right:0},dragElastic:.2,onDragEnd:N,animate:{x:`-${m*100}%`},transition:{type:"spring",stiffness:300,damping:30},children:x.map((k,O)=>h.jsx(V6,{children:h.jsxs($1,{as:I.div,initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.2},children:[h.jsx(D1,{children:d[O]?h.jsx(R1,{initial:{scale:0,opacity:0},animate:{scale:1,opacity:1},transition:{type:"spring",stiffness:300,damping:20},children:"WIN!"}):h.jsxs(z1,{$isSpinning:c[O],$finalPosition:T(k.targetIndex),children:[v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},P)),v.map((K,P)=>h.jsx(as,{src:K,alt:k.title},`duplicate-${P}`))]})}),h.jsxs(O1,{children:["Step ",k.number]}),h.jsx(k1,{children:k.title}),h.jsx(B1,{children:k.description})]})},k.number))}),h.jsx(U6,{children:x.map((k,O)=>h.jsx(H6,{$active:m===O,onClick:()=>g(O)},O))})]})]})})},q6=wt`
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
-`,q6=wt`
+`,X6=wt`
   0%, 100% { box-shadow: 0 0 20px ${b.gold}40; }
   50% { box-shadow: 0 0 40px ${b.gold}60; }
 `;wt`
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-`;const X6=wt`
+`;const P6=wt`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
-`,P6=w.section`
+`,K6=w.section`
   padding: 100px 24px;
   background: ${b.cream};
   position: relative;
   overflow: hidden;
-`,K6=w.div`
+`,Q6=w.div`
   max-width: 1100px;
   margin: 0 auto;
-`,Q6=w(I.h2)`
+`,Z6=w(I.h2)`
   font-size: clamp(2.5rem, 6vw, 4rem);
   text-align: center;
   margin-bottom: 20px;
@@ -715,7 +721,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
       height: 4px;
     }
   }
-`,Z6=w(I.p)`
+`,F6=w(I.p)`
   font-size: 0.95rem;
   color: ${b.darkBrown};
   text-align: center;
@@ -723,13 +729,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   margin: 0 auto 56px;
   font-weight: 500;
   line-height: 1.6;
-  animation: ${X6} 3s ease-in-out infinite;
+  animation: ${P6} 3s ease-in-out infinite;
 
   span {
     color: ${b.red};
     font-weight: 700;
   }
-`,F6=w(I.div)`
+`,J6=w(I.div)`
   background: ${b.darkBrown};
   border-radius: 24px;
   padding: 48px 32px;
@@ -745,14 +751,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     background: radial-gradient(circle at 50% 0%, rgba(230, 201, 86, 0.15) 0%, transparent 60%);
     pointer-events: none;
   }
-`,J6=w.div`
+`,W6=w.div`
   font-size: 14px;
   color: ${b.cream};
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 12px;
   opacity: 0.8;
-`,W6=w.div`
+`,I6=w.div`
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 900;
   color: ${b.gold};
@@ -760,11 +766,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   line-height: 1;
   margin-bottom: 12px;
   text-shadow: ${Ja.glow};
-`,I6=w.div`
+`,tA=w.div`
   font-size: 1rem;
   color: ${b.cream};
   opacity: 0.7;
-`,tA=w.div`
+`,eA=w.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
@@ -780,7 +786,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   position: relative;
   overflow: hidden;
   border: 2px solid ${n=>n.$variant==="gold"?b.gold:b.coral};
-  animation: ${q6} 3s ease-in-out infinite;
+  animation: ${X6} 3s ease-in-out infinite;
 
   &::before {
     content: '';
@@ -831,7 +837,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${n=>n.$color||b.gold};
   font-family: 'Poppins', sans-serif;
   margin-bottom: 16px;
-  animation: ${G6} 2s ease-in-out infinite;
+  animation: ${q6} 2s ease-in-out infinite;
 `,Y1=w.p`
   font-size: 1rem;
   color: ${b.cream};
@@ -839,27 +845,27 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   line-height: 1.7;
   max-width: 280px;
   margin: 0 auto;
-`,eA=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),{playerCount:o,jackpot:l}=Ls(),c=d=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:0}).format(d),f={hidden:{opacity:0,y:40,scale:.95},visible:{opacity:1,y:0,scale:1,transition:{duration:.6}}};return h.jsx(P6,{id:"prizes",ref:n,children:h.jsxs(K6,{children:[h.jsx(Q6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"The Jackpot Grows With You"}),h.jsxs(Z6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:["More players means ",h.jsx("span",{children:"bigger prizes"}),". The jackpot equals the total number of players in your pool. For every new million players, a new pool gets started."]}),h.jsxs(F6,{initial:{opacity:0,scale:.95},animate:a?{opacity:1,scale:1}:{},transition:{duration:.6,delay:.2},children:[h.jsx(J6,{children:"Current Jackpot"}),h.jsx(W6,{children:c(l)}),h.jsx(I6,{children:"Growing with every new player"})]}),h.jsxs(tA,{children:[h.jsxs(N1,{$variant:"gold",variants:f,initial:"hidden",animate:a?"visible":"hidden",transition:{delay:.3},children:[h.jsx(L1,{children:h.jsx(_1,{src:"/moneypools-landing/images/06.png",alt:"Fair Odds",$color:b.gold,whileHover:{scale:1.05,rotate:3},transition:{type:"spring",stiffness:300}})}),h.jsx(V1,{$variant:"gold",children:"Transparent"}),h.jsx(U1,{children:"Fair Odds for Everyone"}),h.jsxs(H1,{$color:b.gold,children:["1 in ",o.toLocaleString()]}),h.jsx(Y1,{children:"Your odds are always equal to the number of players in the pool. Simple, transparent, and fair for everyone."})]}),h.jsxs(N1,{$variant:"coral",variants:f,initial:"hidden",animate:a?"visible":"hidden",transition:{delay:.4},children:[h.jsx(L1,{children:h.jsx(_1,{src:"/moneypools-landing/images/04.png",alt:"Guaranteed Winner",$color:b.coral,whileHover:{scale:1.05,rotate:-3},transition:{type:"spring",stiffness:300}})}),h.jsx(V1,{$variant:"coral",children:"Every Draw"}),h.jsx(U1,{children:"Guaranteed Winner"}),h.jsx(H1,{$color:b.coral,children:"100%"}),h.jsx(Y1,{children:"Every single draw produces a winner. No rollovers, no empty rounds. Someone always wins the jackpot."})]})]})]})})},nA=w.section`
+`,nA=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),{playerCount:o,jackpot:l}=Ls(),c=d=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:0}).format(d),f={hidden:{opacity:0,y:40,scale:.95},visible:{opacity:1,y:0,scale:1,transition:{duration:.6}}};return h.jsx(K6,{id:"prizes",ref:n,children:h.jsxs(Q6,{children:[h.jsx(Z6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"The Jackpot Grows With You"}),h.jsxs(F6,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:["More players means ",h.jsx("span",{children:"bigger prizes"}),". The jackpot equals the total number of players in your pool. For every new million players, a new pool gets started."]}),h.jsxs(J6,{initial:{opacity:0,scale:.95},animate:a?{opacity:1,scale:1}:{},transition:{duration:.6,delay:.2},children:[h.jsx(W6,{children:"Current Jackpot"}),h.jsx(I6,{children:c(l)}),h.jsx(tA,{children:"Growing with every new player"})]}),h.jsxs(eA,{children:[h.jsxs(N1,{$variant:"gold",variants:f,initial:"hidden",animate:a?"visible":"hidden",transition:{delay:.3},children:[h.jsx(L1,{children:h.jsx(_1,{src:"/moneypools-landing/images/06.png",alt:"Fair Odds",$color:b.gold,whileHover:{scale:1.05,rotate:3},transition:{type:"spring",stiffness:300}})}),h.jsx(V1,{$variant:"gold",children:"Transparent"}),h.jsx(U1,{children:"Fair Odds for Everyone"}),h.jsxs(H1,{$color:b.gold,children:["1 in ",o.toLocaleString()]}),h.jsx(Y1,{children:"Your odds are always equal to the number of players in the pool. Simple, transparent, and fair for everyone."})]}),h.jsxs(N1,{$variant:"coral",variants:f,initial:"hidden",animate:a?"visible":"hidden",transition:{delay:.4},children:[h.jsx(L1,{children:h.jsx(_1,{src:"/moneypools-landing/images/04.png",alt:"Guaranteed Winner",$color:b.coral,whileHover:{scale:1.05,rotate:-3},transition:{type:"spring",stiffness:300}})}),h.jsx(V1,{$variant:"coral",children:"Every Draw"}),h.jsx(U1,{children:"Guaranteed Winner"}),h.jsx(H1,{$color:b.coral,children:"100%"}),h.jsx(Y1,{children:"Every single draw produces a winner. No rollovers, no empty rounds. Someone always wins the jackpot."})]})]})]})})},iA=w.section`
   padding: 100px 24px;
   background: ${b.darkBrown};
   position: relative;
   overflow: hidden;
-`,iA=w.div`
+`,aA=w.div`
   max-width: 1200px;
   margin: 0 auto;
-`,aA=w(I.h2)`
+`,rA=w(I.h2)`
   font-size: clamp(2rem, 5vw, 3rem);
   color: ${b.cream};
   text-align: center;
   margin-bottom: 16px;
-`,rA=w(I.p)`
+`,oA=w(I.p)`
   font-size: 1.1rem;
   color: ${b.cream};
   text-align: center;
   opacity: 0.8;
   max-width: 550px;
   margin: 0 auto 48px;
-`,oA=w.div`
+`,lA=w.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
@@ -902,7 +908,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     transition: transform ${Bt.normal};
     transform: ${n=>n.$highlighted?"scale(1.05)":"none"};
   }
-`,lA=w.div`
+`,sA=w.div`
   position: absolute;
   bottom: 12px;
   left: 12px;
@@ -919,11 +925,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     opacity: 1;
     transform: translateY(0);
   }
-`,sA=w.span`
+`,cA=w.span`
   color: ${b.cream};
   font-weight: 600;
   font-size: 13px;
-`,cA=w.div`
+`,uA=w.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -931,7 +937,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     grid-template-columns: repeat(3, 1fr);
   }
-`,uA=w(I.div)`
+`,fA=w(I.div)`
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   padding: 28px 24px;
@@ -943,7 +949,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     background: rgba(255, 255, 255, 0.06);
     border-color: ${b.coral};
   }
-`,fA=w.div`
+`,dA=w.div`
   width: 64px;
   height: 64px;
   margin: 0 auto 16px;
@@ -958,16 +964,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     height: 32px;
     fill: ${b.darkBrown};
   }
-`,dA=w.h3`
+`,hA=w.h3`
   font-size: 1.2rem;
   color: ${b.cream};
   margin-bottom: 8px;
-`,hA=w.p`
+`,pA=w.p`
   font-size: 0.9rem;
   color: ${b.cream};
   opacity: 0.7;
   line-height: 1.5;
-`,pA=w.span`
+`,mA=w.span`
   display: inline-block;
   background: ${b.gold};
   color: ${b.darkBrown};
@@ -978,21 +984,21 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   margin-top: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-`,mA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"})}),gA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"})}),yA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M13 7.83c.85-.3 1.53-.98 1.83-1.83H18l-3 7h2l-4 9 1-9h-2l2-6h-.83zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"})}),xA=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(0);j.useEffect(()=>{const m=setInterval(()=>{l(g=>(g+1)%8)},2e3);return()=>clearInterval(m)},[]);const c=[{id:"01",name:"Tiger Tech"},{id:"03",name:"Lucky Cat"},{id:"04",name:"Fortune Paw"},{id:"05",name:"Golden Bear"},{id:"06",name:"Neon Cat"},{id:"07",name:"Fire Tiger"},{id:"08",name:"Money Mouse"},{id:"09",name:"Prosperity"}],f=[{Icon:mA,title:"Form Syndicates",description:"Team up with up to 10 friends. Win together, share together.",badge:null},{Icon:gA,title:"Gift Tickets",description:"Send tickets to friends and family. Spread the luck around.",badge:null},{Icon:yA,title:"10x Your Odds",description:"Buy up to 9 extra tickets and multiply your chances.",badge:"Power Up"}],d={hidden:{},visible:{transition:{staggerChildren:.1}}},p={hidden:{opacity:0,scale:.9},visible:{opacity:1,scale:1,transition:{duration:.4}}};return h.jsx(nA,{id:"collectibles",ref:n,children:h.jsxs(iA,{children:[h.jsx(aA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Collect Unique Avatars"}),h.jsx(rA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"Every player gets a unique 3D collectible. Build your collection as you play."}),h.jsx(oA,{as:I.div,variants:d,initial:"hidden",animate:a?"visible":"hidden",children:c.map((m,g)=>h.jsxs(Db,{variants:p,$highlighted:g===o,children:[h.jsx("img",{src:`/moneypools-landing/images/${m.id}.png`,alt:m.name}),h.jsx(lA,{$highlighted:g===o,children:h.jsx(sA,{children:m.name})})]},m.id))}),h.jsx(cA,{as:I.div,variants:d,initial:"hidden",animate:a?"visible":"hidden",children:f.map(m=>h.jsxs(uA,{variants:p,children:[h.jsx(fA,{children:h.jsx(m.Icon,{})}),h.jsx(dA,{children:m.title}),h.jsx(hA,{children:m.description}),m.badge&&h.jsx(pA,{children:m.badge})]},m.title))})]})})},vA=w.section`
+`,gA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"})}),yA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"})}),xA=()=>h.jsx("svg",{viewBox:"0 0 24 24",children:h.jsx("path",{d:"M13 7.83c.85-.3 1.53-.98 1.83-1.83H18l-3 7h2l-4 9 1-9h-2l2-6h-.83zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"})}),vA=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(0);j.useEffect(()=>{const m=setInterval(()=>{l(g=>(g+1)%8)},2e3);return()=>clearInterval(m)},[]);const c=[{id:"01",name:"Tiger Tech"},{id:"03",name:"Lucky Cat"},{id:"04",name:"Fortune Paw"},{id:"05",name:"Golden Bear"},{id:"06",name:"Neon Cat"},{id:"07",name:"Fire Tiger"},{id:"08",name:"Money Mouse"},{id:"09",name:"Prosperity"}],f=[{Icon:gA,title:"Form Syndicates",description:"Team up with up to 10 friends. Win together, share together.",badge:null},{Icon:yA,title:"Gift Tickets",description:"Send tickets to friends and family. Spread the luck around.",badge:null},{Icon:xA,title:"10x Your Odds",description:"Buy up to 9 extra tickets and multiply your chances.",badge:"Power Up"}],d={hidden:{},visible:{transition:{staggerChildren:.1}}},p={hidden:{opacity:0,scale:.9},visible:{opacity:1,scale:1,transition:{duration:.4}}};return h.jsx(iA,{id:"collectibles",ref:n,children:h.jsxs(aA,{children:[h.jsx(rA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Collect Unique Avatars"}),h.jsx(oA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"Every player gets a unique 3D collectible. Build your collection as you play."}),h.jsx(lA,{as:I.div,variants:d,initial:"hidden",animate:a?"visible":"hidden",children:c.map((m,g)=>h.jsxs(Db,{variants:p,$highlighted:g===o,children:[h.jsx("img",{src:`/moneypools-landing/images/${m.id}.png`,alt:m.name}),h.jsx(sA,{$highlighted:g===o,children:h.jsx(cA,{children:m.name})})]},m.id))}),h.jsx(uA,{as:I.div,variants:d,initial:"hidden",animate:a?"visible":"hidden",children:f.map(m=>h.jsxs(fA,{variants:p,children:[h.jsx(dA,{children:h.jsx(m.Icon,{})}),h.jsx(hA,{children:m.title}),h.jsx(pA,{children:m.description}),m.badge&&h.jsx(mA,{children:m.badge})]},m.title))})]})})},bA=w.section`
   padding: 100px 0;
   background: ${b.cream};
   position: relative;
   overflow: hidden;
-`,bA=w.div`
+`,SA=w.div`
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
-`,SA=w(I.h2)`
+`,wA=w(I.h2)`
   font-size: clamp(2rem, 5vw, 3rem);
   color: ${b.darkBrown};
   text-align: center;
   margin-bottom: 48px;
-`,wA=w.div`
+`,TA=w.div`
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -1001,14 +1007,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (max-width: ${J.tablet}) {
     padding: 0 40px;
   }
-`,TA=w.div`
+`,jA=w.div`
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
-`,jA=w(I.div)`
+`,CA=w(I.div)`
   display: flex;
   gap: 24px;
-`,CA=w.div`
+`,EA=w.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1032,10 +1038,10 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     background: ${b.red};
     transform: scale(1.1);
   }
-`,EA=w.div`
+`,AA=w.div`
   display: flex;
   gap: 8px;
-`,AA=w.button`
+`,MA=w.button`
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1048,7 +1054,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   &:hover {
     opacity: 0.7;
   }
-`,MA=w(I.div)`
+`,$A=w(I.div)`
   background: ${b.white};
   border-radius: 16px;
   padding: 32px 28px;
@@ -1063,25 +1069,25 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(21, 1, 0, 0.12);
   }
-`,$A=w.div`
+`,DA=w.div`
   font-size: 2rem;
   font-weight: 900;
   color: ${b.darkBrown};
   margin-bottom: 16px;
   font-family: 'Poppins', sans-serif;
-`,DA=w.p`
+`,zA=w.p`
   font-size: 0.95rem;
   color: ${b.darkBrown};
   line-height: 1.8;
   margin-bottom: 24px;
   font-weight: 400;
-`,zA=w.div`
+`,RA=w.div`
   display: flex;
   align-items: center;
   gap: 12px;
   padding-top: 20px;
   border-top: 1px solid rgba(21, 1, 0, 0.1);
-`,RA=w.div`
+`,OA=w.div`
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1093,28 +1099,28 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   font-weight: 700;
   color: ${b.darkBrown};
   border: 2px solid rgba(21, 1, 0, 0.1);
-`,OA=w.div``,kA=w.div`
+`,kA=w.div``,BA=w.div`
   font-weight: 600;
   color: ${b.darkBrown};
   font-size: 0.9rem;
-`,BA=w.div`
+`,NA=w.div`
   font-size: 0.8rem;
   color: ${b.darkBrown};
   opacity: 0.6;
-`,NA=w.div`
+`,LA=w.div`
   display: flex;
   gap: 4px;
   margin-bottom: 16px;
-`,LA=w.span`
+`,_A=w.span`
   color: ${b.gold};
   font-size: 16px;
-`,_A=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(0),[c,f]=j.useState(4),d=[{amount:"€47,230",text:"Could not believe it when I got the notification. Three weeks in and I am paying off my loans.",name:"Sarah M.",location:"Dublin, Ireland",initials:"SM"},{amount:"€52,100",text:"My coworkers and I formed a syndicate. We won and split it five ways. Still life-changing.",name:"Marcus J.",location:"Cork, Ireland",initials:"MJ"},{amount:"€31,500",text:"Way better odds than anything else out there. Won on my second month of playing.",name:"Emily R.",location:"Galway, Ireland",initials:"ER"},{amount:"€49,800",text:"My wife gifted me a subscription. Best gift ever. I won the very next draw.",name:"David K.",location:"Limerick, Ireland",initials:"DK"},{amount:"€38,900",text:"Joined with my friends from college. We're all winners now. Such a fair system!",name:"Lisa O.",location:"Waterford, Ireland",initials:"LO"},{amount:"€45,600",text:"The multiplier feature really works! Got 3x tickets and won on the fourth draw.",name:"Tom H.",location:"Drogheda, Ireland",initials:"TH"},{amount:"€58,200",text:"Best decision ever. The odds are transparent and fair. Won after 2 months.",name:"Rachel B.",location:"Dundalk, Ireland",initials:"RB"},{amount:"€41,300",text:"Invited 5 friends and my odds multiplied. Won in my third draw. Unbelievable!",name:"James P.",location:"Sligo, Ireland",initials:"JP"},{amount:"€53,700",text:"The guaranteed winner per draw sold me. No fake promises. Won after a month!",name:"Anna K.",location:"Kilkenny, Ireland",initials:"AK"},{amount:"€36,400",text:"My sister recommended it. I thought why not. Won €36k three weeks later!",name:"Michael D.",location:"Wexford, Ireland",initials:"MD"},{amount:"€50,900",text:"The fact that the jackpot equals the players makes it so fair. Best platform ever.",name:"Sophie L.",location:"Carlow, Ireland",initials:"SL"},{amount:"€44,100",text:"Formed a syndicate with 8 people. We won and everyone got a nice share. Amazing!",name:"Kevin W.",location:"Athlone, Ireland",initials:"KW"}];j.useEffect(()=>{const x=()=>{window.innerWidth<640?f(1):window.innerWidth<900?f(2):window.innerWidth<1200?f(3):f(4)};return x(),window.addEventListener("resize",x),()=>window.removeEventListener("resize",x)},[]),j.useEffect(()=>{const x=setInterval(()=>{l(T=>T>=d.length-1?0:T+1)},4e3);return()=>clearInterval(x)},[c,d.length]);const p=()=>{l(x=>x<=0?d.length-1:x-1)},m=()=>{l(x=>x>=d.length-1?0:x+1)},g=x=>{l(x)},v=[...d,...d,...d];return h.jsxs(vA,{ref:n,children:[h.jsx(bA,{children:h.jsx(SA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Real Winners, Real Winnings"})}),h.jsx(wA,{children:h.jsx(jA,{animate:{x:-(o+d.length)*364},transition:{type:"spring",stiffness:300,damping:30},children:v.map((x,T)=>h.jsxs(MA,{children:[h.jsx(NA,{children:[...Array(5)].map((C,D)=>h.jsx(LA,{children:"★"},D))}),h.jsx($A,{children:x.amount}),h.jsx(DA,{children:x.text}),h.jsxs(zA,{children:[h.jsx(RA,{children:x.initials}),h.jsxs(OA,{children:[h.jsx(kA,{children:x.name}),h.jsx(BA,{children:x.location})]})]})]},T))})}),h.jsx(TA,{children:h.jsxs(CA,{children:[h.jsx(G1,{onClick:p,children:"‹"}),h.jsx(EA,{children:Array.from({length:d.length}).map((x,T)=>h.jsx(AA,{$active:T===o,onClick:()=>g(T)},T))}),h.jsx(G1,{onClick:m,children:"›"})]})})]})},VA=wt`
+`,VA=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),[o,l]=j.useState(0),[c,f]=j.useState(4),d=[{amount:"€47,230",text:"Could not believe it when I got the notification. Three weeks in and I am paying off my loans.",name:"Sarah M.",location:"Dublin, Ireland",initials:"SM"},{amount:"€52,100",text:"My coworkers and I formed a syndicate. We won and split it five ways. Still life-changing.",name:"Marcus J.",location:"Cork, Ireland",initials:"MJ"},{amount:"€31,500",text:"Way better odds than anything else out there. Won on my second month of playing.",name:"Emily R.",location:"Galway, Ireland",initials:"ER"},{amount:"€49,800",text:"My wife gifted me a subscription. Best gift ever. I won the very next draw.",name:"David K.",location:"Limerick, Ireland",initials:"DK"},{amount:"€38,900",text:"Joined with my friends from college. We're all winners now. Such a fair system!",name:"Lisa O.",location:"Waterford, Ireland",initials:"LO"},{amount:"€45,600",text:"The multiplier feature really works! Got 3x tickets and won on the fourth draw.",name:"Tom H.",location:"Drogheda, Ireland",initials:"TH"},{amount:"€58,200",text:"Best decision ever. The odds are transparent and fair. Won after 2 months.",name:"Rachel B.",location:"Dundalk, Ireland",initials:"RB"},{amount:"€41,300",text:"Invited 5 friends and my odds multiplied. Won in my third draw. Unbelievable!",name:"James P.",location:"Sligo, Ireland",initials:"JP"},{amount:"€53,700",text:"The guaranteed winner per draw sold me. No fake promises. Won after a month!",name:"Anna K.",location:"Kilkenny, Ireland",initials:"AK"},{amount:"€36,400",text:"My sister recommended it. I thought why not. Won €36k three weeks later!",name:"Michael D.",location:"Wexford, Ireland",initials:"MD"},{amount:"€50,900",text:"The fact that the jackpot equals the players makes it so fair. Best platform ever.",name:"Sophie L.",location:"Carlow, Ireland",initials:"SL"},{amount:"€44,100",text:"Formed a syndicate with 8 people. We won and everyone got a nice share. Amazing!",name:"Kevin W.",location:"Athlone, Ireland",initials:"KW"}];j.useEffect(()=>{const x=()=>{window.innerWidth<640?f(1):window.innerWidth<900?f(2):window.innerWidth<1200?f(3):f(4)};return x(),window.addEventListener("resize",x),()=>window.removeEventListener("resize",x)},[]),j.useEffect(()=>{const x=setInterval(()=>{l(T=>T>=d.length-1?0:T+1)},4e3);return()=>clearInterval(x)},[c,d.length]);const p=()=>{l(x=>x<=0?d.length-1:x-1)},m=()=>{l(x=>x>=d.length-1?0:x+1)},g=x=>{l(x)},v=[...d,...d,...d];return h.jsxs(bA,{ref:n,children:[h.jsx(SA,{children:h.jsx(wA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Real Winners, Real Winnings"})}),h.jsx(TA,{children:h.jsx(CA,{animate:{x:-(o+d.length)*364},transition:{type:"spring",stiffness:300,damping:30},children:v.map((x,T)=>h.jsxs($A,{children:[h.jsx(LA,{children:[...Array(5)].map((C,D)=>h.jsx(_A,{children:"★"},D))}),h.jsx(DA,{children:x.amount}),h.jsx(zA,{children:x.text}),h.jsxs(RA,{children:[h.jsx(OA,{children:x.initials}),h.jsxs(kA,{children:[h.jsx(BA,{children:x.name}),h.jsx(NA,{children:x.location})]})]})]},T))})}),h.jsx(jA,{children:h.jsxs(EA,{children:[h.jsx(G1,{onClick:p,children:"‹"}),h.jsx(AA,{children:Array.from({length:d.length}).map((x,T)=>h.jsx(MA,{$active:T===o,onClick:()=>g(T)},T))}),h.jsx(G1,{onClick:m,children:"›"})]})})]})},UA=wt`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
-`,UA=wt`
+`,HA=wt`
   0%, 100% { box-shadow: 0 0 30px rgba(230, 201, 86, 0.2); }
   50% { box-shadow: 0 0 50px rgba(230, 201, 86, 0.4); }
-`,HA=w.section`
+`,YA=w.section`
   padding: 120px 24px;
   background: ${b.darkBrown};
   position: relative;
@@ -1131,19 +1137,19 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
                 radial-gradient(circle at 70% 80%, rgba(203, 51, 50, 0.06) 0%, transparent 40%);
     pointer-events: none;
   }
-`,YA=w.div`
+`,GA=w.div`
   max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-`,GA=w(I.h2)`
+`,qA=w(I.h2)`
   font-size: clamp(2.5rem, 6vw, 3.5rem);
   color: ${b.cream};
   text-align: center;
   margin-bottom: 16px;
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
-`,qA=w(I.p)`
+`,XA=w(I.p)`
   font-size: 1.1rem;
   color: ${b.cream};
   text-align: center;
@@ -1151,7 +1157,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   max-width: 500px;
   margin: 0 auto 56px;
   line-height: 1.6;
-`,XA=w.div`
+`,PA=w.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -1161,20 +1167,20 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
-`,PA=w(I.div)`
+`,KA=w(I.div)`
   background: ${n=>n.$featured?b.cream:"rgba(253, 249, 238, 0.05)"};
   border-radius: 20px;
   padding: 40px 32px;
   position: relative;
   border: ${n=>n.$featured?"none":"1px solid rgba(253, 249, 238, 0.1)"};
   transition: all ${Bt.normal};
-  animation: ${n=>n.$featured?UA:"none"} 3s ease-in-out infinite;
+  animation: ${n=>n.$featured?HA:"none"} 3s ease-in-out infinite;
 
   &:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: ${n=>n.$featured?"0 25px 60px rgba(230, 201, 86, 0.4)":"0 20px 50px rgba(0, 0, 0, 0.3)"};
   }
-`,KA=w.div`
+`,QA=w.div`
   position: absolute;
   top: -14px;
   left: 50%;
@@ -1187,7 +1193,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-`,QA=w.img`
+`,ZA=w.img`
   width: 100px;
   height: 100px;
   margin: 0 auto 20px;
@@ -1195,45 +1201,45 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   object-fit: cover;
   display: block;
   border: 3px solid ${n=>n.$featured?b.gold:"rgba(253, 249, 238, 0.3)"};
-  animation: ${VA} 3s ease-in-out infinite;
+  animation: ${UA} 3s ease-in-out infinite;
   animation-delay: ${n=>n.$featured?"0s":"0.5s"};
-`,ZA=w.h3`
+`,FA=w.h3`
   font-size: 2.2rem;
   color: ${n=>n.$featured?b.darkBrown:b.cream};
   margin-bottom: 8px;
   text-align: center;
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
-`,FA=w.p`
+`,JA=w.p`
   font-size: 0.9rem;
   color: ${n=>n.$featured?b.darkBrown:b.cream};
   opacity: 0.6;
   text-align: center;
   margin-bottom: 28px;
-`,JA=w.div`
+`,WA=w.div`
   text-align: center;
   margin-bottom: 28px;
-`,WA=w.span`
+`,IA=w.span`
   font-size: 3rem;
   font-weight: 800;
   color: ${n=>n.$featured?b.darkBrown:b.gold};
   font-family: 'Poppins', sans-serif;
-`,IA=w.span`
+`,t8=w.span`
   font-size: 1rem;
   color: ${n=>n.$featured?b.darkBrown:b.cream};
   opacity: 0.5;
-`,t8=w.ul`
+`,e8=w.ul`
   list-style: none;
   padding: 0;
   margin: 0 0 32px 0;
-`,e8=w.li`
+`,n8=w.li`
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 12px 0;
   color: ${n=>n.$featured?b.darkBrown:b.cream};
   font-size: 0.95rem;
-`,n8=w.span`
+`,i8=w.span`
   width: 20px;
   height: 20px;
   background: ${n=>n.$featured?b.gold:"rgba(230, 201, 86, 0.2)"};
@@ -1249,7 +1255,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     color: ${n=>n.$featured?b.darkBrown:b.gold};
     font-weight: 700;
   }
-`,i8=w(I.button)`
+`,a8=w(I.button)`
   width: 100%;
   padding: 16px 28px;
   font-size: 15px;
@@ -1276,16 +1282,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
       border-color: rgba(253, 249, 238, 0.5);
     }
   `}
-`,a8=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),o=ir(),l=()=>{o("/dashboard")},c=[{name:"Silver",description:"Perfect for casual players",price:7,avatar:"/moneypools-landing/images/07.png",featured:!1,features:["4 draws per month","1 unique collectible","Join syndicates","Gift tickets"]},{name:"Gold",description:"For serious winners",price:14,avatar:"/moneypools-landing/images/09.png",featured:!0,features:["10 draws per month","3 unique collectibles","Create syndicates","Unlimited gifting","Priority support"]}],f={hidden:{},visible:{transition:{staggerChildren:.15}}},d={hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.5}}};return h.jsx(HA,{id:"pricing",ref:n,children:h.jsxs(YA,{children:[h.jsx(GA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Start Winning Today"}),h.jsx(qA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"Pick the plan that fits your style. Cancel anytime."}),h.jsx(XA,{as:I.div,variants:f,initial:"hidden",animate:a?"visible":"hidden",children:c.map(p=>h.jsxs(PA,{$featured:p.featured,variants:d,children:[p.featured&&h.jsx(KA,{children:"Best Value"}),h.jsx(QA,{src:p.avatar,alt:p.name,$featured:p.featured}),h.jsx(ZA,{$featured:p.featured,children:p.name}),h.jsx(FA,{$featured:p.featured,children:p.description}),h.jsxs(JA,{children:[h.jsxs(WA,{$featured:p.featured,children:["€",p.price]}),h.jsx(IA,{$featured:p.featured,children:"/month"})]}),h.jsx(t8,{children:p.features.map(m=>h.jsxs(e8,{$featured:p.featured,children:[h.jsx(n8,{$featured:p.featured}),m]},m))}),h.jsx(i8,{$featured:p.featured,onClick:l,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Get Started"})]},p.name))})]})})},r8=wt`
+`,r8=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),o=ir(),l=()=>{o("/dashboard")},c=[{name:"Silver",description:"Perfect for casual players",price:7,avatar:"/moneypools-landing/images/07.png",featured:!1,features:["4 draws per month","1 unique collectible","Join syndicates","Gift tickets"]},{name:"Gold",description:"For serious winners",price:14,avatar:"/moneypools-landing/images/09.png",featured:!0,features:["10 draws per month","3 unique collectibles","Create syndicates","Unlimited gifting","Priority support"]}],f={hidden:{},visible:{transition:{staggerChildren:.15}}},d={hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.5}}};return h.jsx(YA,{id:"pricing",ref:n,children:h.jsxs(GA,{children:[h.jsx(qA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Start Winning Today"}),h.jsx(XA,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"Pick the plan that fits your style. Cancel anytime."}),h.jsx(PA,{as:I.div,variants:f,initial:"hidden",animate:a?"visible":"hidden",children:c.map(p=>h.jsxs(KA,{$featured:p.featured,variants:d,children:[p.featured&&h.jsx(QA,{children:"Best Value"}),h.jsx(ZA,{src:p.avatar,alt:p.name,$featured:p.featured}),h.jsx(FA,{$featured:p.featured,children:p.name}),h.jsx(JA,{$featured:p.featured,children:p.description}),h.jsxs(WA,{children:[h.jsxs(IA,{$featured:p.featured,children:["€",p.price]}),h.jsx(t8,{$featured:p.featured,children:"/month"})]}),h.jsx(e8,{children:p.features.map(m=>h.jsxs(n8,{$featured:p.featured,children:[h.jsx(i8,{$featured:p.featured}),m]},m))}),h.jsx(a8,{$featured:p.featured,onClick:l,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Get Started"})]},p.name))})]})})},o8=wt`
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.05); opacity: 0.9; }
-`,o8=wt`
+`,l8=wt`
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.02); }
-`,l8=wt`
+`,s8=wt`
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-`,s8=w.section`
+`,c8=w.section`
   padding: 120px 24px;
   background: ${b.darkBrown};
   position: relative;
@@ -1304,13 +1310,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
                 radial-gradient(circle at 80% 80%, rgba(203, 51, 50, 0.1) 0%, transparent 40%);
     pointer-events: none;
   }
-`,c8=w.div`
+`,u8=w.div`
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
   position: relative;
   z-index: 1;
-`,u8=w(I.div)`
+`,f8=w(I.div)`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1318,8 +1324,8 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   padding: 10px 24px;
   border-radius: 50px;
   margin-bottom: 24px;
-  animation: ${o8} 2s ease-in-out infinite;
-`,f8=w.span`
+  animation: ${l8} 2s ease-in-out infinite;
+`,d8=w.span`
   width: 8px;
   height: 8px;
   background: ${b.cream};
@@ -1330,20 +1336,20 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
   }
-`,d8=w.span`
+`,h8=w.span`
   color: ${b.cream};
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-`,h8=w(I.h2)`
+`,p8=w(I.h2)`
   font-size: clamp(2.5rem, 6vw, 4rem);
   color: ${b.cream};
   margin-bottom: 16px;
   line-height: 1.1;
   font-weight: 900;
   font-family: 'Poppins', sans-serif;
-`,p8=w(I.p)`
+`,m8=w(I.p)`
   font-size: 1.1rem;
   color: ${b.cream};
   opacity: 0.8;
@@ -1354,10 +1360,10 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     white-space: normal;
     font-size: 1rem;
   }
-`,m8=w(I.div)`
+`,g8=w(I.div)`
   position: relative;
   display: inline-block;
-`,g8=w(I.button)`
+`,y8=w(I.button)`
   padding: 22px 64px;
   font-size: 20px;
   font-weight: 800;
@@ -1368,7 +1374,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  animation: ${r8} 2s ease-in-out infinite;
+  animation: ${o8} 2s ease-in-out infinite;
 
   &::before {
     content: '';
@@ -1378,7 +1384,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    animation: ${l8} 3s infinite;
+    animation: ${s8} 3s infinite;
   }
 
   &:hover {
@@ -1390,7 +1396,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     padding: 18px 48px;
     font-size: 18px;
   }
-`,y8=w(I.div)`
+`,x8=w(I.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1401,13 +1407,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   border: 1px solid ${b.red}40;
   border-radius: 50px;
   display: inline-flex;
-`,x8=w.span`
-  font-size: 16px;
 `,v8=w.span`
+  font-size: 16px;
+`,b8=w.span`
   color: ${b.coral};
   font-size: 14px;
   font-weight: 600;
-`,b8=w(I.div)`
+`,S8=w(I.div)`
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -1465,14 +1471,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (max-width: ${J.mobile}) {
     display: none;
   }
-`,S8=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),o=ir(),[l,c]=j.useState(47);j.useEffect(()=>{if(a){const d=setInterval(()=>{c(p=>p+Math.floor(Math.random()*2))},3e3);return()=>clearInterval(d)}},[a]);const f=()=>{o("/dashboard")};return h.jsxs(s8,{ref:n,children:[h.jsx(q1,{className:"left",src:"/moneypools-landing/images/03.png",alt:""}),h.jsx(q1,{className:"right",src:"/moneypools-landing/images/05.png",alt:""}),h.jsxs(c8,{children:[h.jsxs(u8,{initial:{opacity:0,y:-20},animate:a?{opacity:1,y:0}:{},transition:{duration:.5},children:[h.jsx(f8,{}),h.jsx(d8,{children:"Next Draw Closing Soon"})]}),h.jsx(h8,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Don't Miss Your Chance"}),h.jsx(p8,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"The jackpot is climbing. Join now before it's too late."}),h.jsx(m8,{initial:{opacity:0,scale:.9},animate:a?{opacity:1,scale:1}:{},transition:{duration:.6,delay:.4},children:h.jsx(g8,{onClick:f,whileHover:{scale:1.05},whileTap:{scale:.98},children:"Join MoneyPools Now!"})}),h.jsx(I.div,{initial:{opacity:0,y:20},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.5},children:h.jsxs(y8,{children:[h.jsx(x8,{children:"⚡"}),h.jsxs(v8,{children:[l," people joined in the last hour"]})]})}),h.jsxs(b8,{initial:{opacity:0},animate:a?{opacity:1}:{},transition:{duration:.6,delay:.6},children:[h.jsxs(Jf,{children:[h.jsx(Wf,{children:"🔒"}),"Secure Payments"]}),h.jsxs(Jf,{children:[h.jsx(Wf,{children:"✓"}),"Cancel Anytime"]}),h.jsxs(Jf,{children:[h.jsx(Wf,{children:"💳"}),"No Hidden Fees"]})]})]})]})},w8=w.footer`
+`,w8=()=>{const n=j.useRef(null),a=sr(n,{once:!0,margin:"-100px"}),o=ir(),[l,c]=j.useState(47);j.useEffect(()=>{if(a){const d=setInterval(()=>{c(p=>p+Math.floor(Math.random()*2))},3e3);return()=>clearInterval(d)}},[a]);const f=()=>{o("/dashboard")};return h.jsxs(c8,{ref:n,children:[h.jsx(q1,{className:"left",src:"/moneypools-landing/images/03.png",alt:""}),h.jsx(q1,{className:"right",src:"/moneypools-landing/images/05.png",alt:""}),h.jsxs(u8,{children:[h.jsxs(f8,{initial:{opacity:0,y:-20},animate:a?{opacity:1,y:0}:{},transition:{duration:.5},children:[h.jsx(d8,{}),h.jsx(h8,{children:"Next Draw Closing Soon"})]}),h.jsx(p8,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6},children:"Don't Miss Your Chance"}),h.jsx(m8,{initial:{opacity:0,y:30},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.1},children:"The jackpot is climbing. Join now before it's too late."}),h.jsx(g8,{initial:{opacity:0,scale:.9},animate:a?{opacity:1,scale:1}:{},transition:{duration:.6,delay:.4},children:h.jsx(y8,{onClick:f,whileHover:{scale:1.05},whileTap:{scale:.98},children:"Join MoneyPools Now!"})}),h.jsx(I.div,{initial:{opacity:0,y:20},animate:a?{opacity:1,y:0}:{},transition:{duration:.6,delay:.5},children:h.jsxs(x8,{children:[h.jsx(v8,{children:"⚡"}),h.jsxs(b8,{children:[l," people joined in the last hour"]})]})}),h.jsxs(S8,{initial:{opacity:0},animate:a?{opacity:1}:{},transition:{duration:.6,delay:.6},children:[h.jsxs(Jf,{children:[h.jsx(Wf,{children:"🔒"}),"Secure Payments"]}),h.jsxs(Jf,{children:[h.jsx(Wf,{children:"✓"}),"Cancel Anytime"]}),h.jsxs(Jf,{children:[h.jsx(Wf,{children:"💳"}),"No Hidden Fees"]})]})]})]})},T8=w.footer`
   padding: 48px 24px 32px;
   background: ${b.darkBrown};
   border-top: 1px solid rgba(253, 249, 238, 0.1);
-`,T8=w.div`
+`,j8=w.div`
   max-width: 1000px;
   margin: 0 auto;
-`,j8=w.div`
+`,C8=w.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1484,16 +1490,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     justify-content: space-between;
     align-items: flex-start;
   }
-`,C8=w.div`
+`,E8=w.div`
   text-align: center;
 
   @media (min-width: ${J.tablet}) {
     text-align: left;
   }
-`,E8=w.img`
+`,A8=w.img`
   height: 36px;
   width: auto;
-`,A8=w.div`
+`,M8=w.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1502,7 +1508,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     gap: 32px;
   }
-`,M8=w.a`
+`,$8=w.a`
   color: ${b.cream};
   font-size: 14px;
   opacity: 0.7;
@@ -1512,11 +1518,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     opacity: 1;
     color: ${b.coral};
   }
-`,$8=w.div`
+`,D8=w.div`
   height: 1px;
   background: rgba(253, 249, 238, 0.1);
   margin-bottom: 24px;
-`,D8=w.div`
+`,z8=w.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1527,15 +1533,15 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     flex-direction: row;
     justify-content: space-between;
   }
-`,z8=w.p`
+`,R8=w.p`
   color: ${b.cream};
   font-size: 13px;
   opacity: 0.5;
-`,R8=w.div`
+`,O8=w.div`
   display: flex;
   align-items: center;
   gap: 10px;
-`,O8=w.span`
+`,k8=w.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1546,7 +1552,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   font-weight: 700;
   font-size: 11px;
   border-radius: 50%;
-`,k8=w.p`
+`,B8=w.p`
   color: ${b.cream};
   font-size: 12px;
   opacity: 0.5;
@@ -1555,7 +1561,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     text-align: right;
   }
-`,B8=()=>{const n=new Date().getFullYear(),a=[{label:"Terms & Conditions",href:"#"},{label:"Privacy Policy",href:"#"},{label:"Responsible Gaming",href:"#"},{label:"Contact",href:"#"}];return h.jsx(w8,{children:h.jsxs(T8,{children:[h.jsxs(j8,{children:[h.jsx(C8,{children:h.jsx(E8,{src:"/moneypools-landing/images/logo_desktop.png",alt:"MoneyPools"})}),h.jsx(A8,{children:a.map(o=>h.jsx(M8,{href:o.href,children:o.label},o.label))})]}),h.jsx($8,{}),h.jsxs(D8,{children:[h.jsxs(z8,{children:[n," MoneyPools Ltd. All rights reserved."]}),h.jsxs(R8,{children:[h.jsx(O8,{children:"18+"}),h.jsx(k8,{children:"Must be 18 or older to participate. Please play responsibly."})]})]})]})})},zb=w(I.div)`
+`,N8=()=>{const n=new Date().getFullYear(),a=[{label:"Terms & Conditions",href:"#"},{label:"Privacy Policy",href:"#"},{label:"Responsible Gaming",href:"#"},{label:"Contact",href:"#"}];return h.jsx(T8,{children:h.jsxs(j8,{children:[h.jsxs(C8,{children:[h.jsx(E8,{children:h.jsx(A8,{src:"/moneypools-landing/images/logo_desktop.png",alt:"MoneyPools"})}),h.jsx(M8,{children:a.map(o=>h.jsx($8,{href:o.href,children:o.label},o.label))})]}),h.jsx(D8,{}),h.jsxs(z8,{children:[h.jsxs(R8,{children:[n," MoneyPools Ltd. All rights reserved."]}),h.jsxs(O8,{children:[h.jsx(k8,{children:"18+"}),h.jsx(B8,{children:"Must be 18 or older to participate. Please play responsibly."})]})]})]})})},zb=w(I.div)`
   position: fixed;
   inset: 0;
   background: rgba(21, 1, 0, 0.85);
@@ -1697,7 +1703,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.darkBrown};
   opacity: 0.7;
   font-size: 0.95rem;
-`,N8=()=>{const{isSignUpModalOpen:n,closeSignUpModal:a,openLoginModal:o,playClick:l,playSuccess:c}=Ls(),[f,d]=j.useState(""),[p,m]=j.useState(""),[g,v]=j.useState(""),[x,T]=j.useState(!1);j.useEffect(()=>{n||(d(""),m(""),v(""),T(!1))},[n]);const C=$=>{$.preventDefault(),c(),T(!0),setTimeout(()=>{a()},2e3)},D=()=>{l(),a(),o()};return h.jsx(en,{children:n&&h.jsx(zb,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:a,children:h.jsxs(Rb,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:$=>$.stopPropagation(),children:[h.jsx(Ob,{onClick:a,children:"×"}),x?h.jsxs(_b,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:[h.jsx(Vb,{}),h.jsx(Ub,{children:"Welcome to MoneyPools"}),h.jsx(Hb,{children:"Your account has been created."})]}):h.jsxs(h.Fragment,{children:[h.jsx(kb,{children:"Join the Pool"}),h.jsxs(Bb,{onSubmit:C,children:[h.jsxs(po,{children:[h.jsx(mo,{children:"Email"}),h.jsx(go,{type:"email",placeholder:"you@example.com",value:f,onChange:$=>d($.target.value),required:!0})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Password"}),h.jsx(go,{type:"password",placeholder:"Create a password",value:p,onChange:$=>m($.target.value),required:!0,minLength:8})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Confirm Password"}),h.jsx(go,{type:"password",placeholder:"Confirm password",value:g,onChange:$=>v($.target.value),required:!0})]}),h.jsx(Nb,{type:"submit",whileHover:{scale:1.01},whileTap:{scale:.99},children:"Create Account"})]}),h.jsxs(Lb,{children:["Already have an account?"," ",h.jsx("button",{type:"button",onClick:D,children:"Log in"})]})]})]})})})},L8=()=>{const{isLoginModalOpen:n,closeLoginModal:a,openSignUpModal:o,playClick:l,playSuccess:c}=Ls(),[f,d]=j.useState(""),[p,m]=j.useState(""),[g,v]=j.useState(!1);j.useEffect(()=>{n||(d(""),m(""),v(!1))},[n]);const x=C=>{C.preventDefault(),c(),v(!0),setTimeout(()=>{a()},2e3)},T=()=>{l(),a(),o()};return h.jsx(en,{children:n&&h.jsx(zb,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:a,children:h.jsxs(Rb,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:C=>C.stopPropagation(),children:[h.jsx(Ob,{onClick:a,children:"×"}),g?h.jsxs(_b,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:[h.jsx(Vb,{}),h.jsx(Ub,{children:"Welcome Back"}),h.jsx(Hb,{children:"Good luck in the next draw."})]}):h.jsxs(h.Fragment,{children:[h.jsx(kb,{children:"Welcome Back"}),h.jsxs(Bb,{onSubmit:x,children:[h.jsxs(po,{children:[h.jsx(mo,{children:"Email"}),h.jsx(go,{type:"email",placeholder:"you@example.com",value:f,onChange:C=>d(C.target.value),required:!0})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Password"}),h.jsx(go,{type:"password",placeholder:"Enter password",value:p,onChange:C=>m(C.target.value),required:!0})]}),h.jsx(Nb,{type:"submit",whileHover:{scale:1.01},whileTap:{scale:.99},children:"Log In"})]}),h.jsxs(Lb,{children:["New here?"," ",h.jsx("button",{type:"button",onClick:T,children:"Sign up"})]})]})]})})})},Yb=j.createContext(),_8={username:"LuckyMax",avatar:"/moneypools-landing/images/05.png",level:12,memberSince:"Oct 2025",totalWinnings:0,currentPool:1,drawsParticipated:23,drawsWon:0,subscriptionTier:"Pro",nextBilling:"Feb 15, 2026",ticketMultiplier:1,syndicate:null,referralCode:"LUCKYMAX2025"},V8={jackpot:52847,activePlayers:52847,currentDrawNumber:48},U8=[{id:1,text:"You joined Pool #1",time:"2 days ago",type:"join"},{id:2,text:"Draw #47 completed — Player X won €51,203",time:"3 days ago",type:"draw"},{id:3,text:"You received a ticket from Sarah",time:"5 days ago",type:"gift"}],H8=({children:n})=>{const[a,o]=j.useState(_8),[l,c]=j.useState(V8),[f,d]=j.useState(U8),[p,m]=j.useState([]),[g,v]=j.useState(!1),[x,T]=j.useState(!1),[C,D]=j.useState(!1),[$,R]=j.useState(!1),[N]=j.useState(()=>{const Q=new Date;return Q.setDate(Q.getDate()+2),Q.setHours(20,0,0,0),Q});j.useEffect(()=>{const Q=setInterval(()=>{const U=Math.floor(Math.random()*3)+1;c(F=>({...F,jackpot:F.jackpot+U,activePlayers:F.activePlayers+U}))},3e3);return()=>clearInterval(Q)},[]);const P={player:a,setPlayer:o,pool:l,activity:f,notifications:p,addNotification:Q=>{m(U=>[{id:Date.now(),...Q},...U])},nextDraw:N,calculateOdds:()=>{const Q=l.activePlayers,U=a.ticketMultiplier;return Math.ceil(Q/U)},updateMultiplier:Q=>{o(U=>({...U,ticketMultiplier:Q}))},syndicateModalOpen:g,setSyndicateModalOpen:v,giftModalOpen:x,setGiftModalOpen:T,multiplierModalOpen:C,setMultiplierModalOpen:D,inviteModalOpen:$,setInviteModalOpen:R};return h.jsx(Yb.Provider,{value:P,children:n})},nn=()=>{const n=j.useContext(Yb);if(!n)throw new Error("useDashboard must be used within a DashboardProvider");return n},Y8=w.header`
+`,L8=()=>{const{isSignUpModalOpen:n,closeSignUpModal:a,openLoginModal:o,playClick:l,playSuccess:c}=Ls(),[f,d]=j.useState(""),[p,m]=j.useState(""),[g,v]=j.useState(""),[x,T]=j.useState(!1);j.useEffect(()=>{n||(d(""),m(""),v(""),T(!1))},[n]);const C=$=>{$.preventDefault(),c(),T(!0),setTimeout(()=>{a()},2e3)},D=()=>{l(),a(),o()};return h.jsx(en,{children:n&&h.jsx(zb,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:a,children:h.jsxs(Rb,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:$=>$.stopPropagation(),children:[h.jsx(Ob,{onClick:a,children:"×"}),x?h.jsxs(_b,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:[h.jsx(Vb,{}),h.jsx(Ub,{children:"Welcome to MoneyPools"}),h.jsx(Hb,{children:"Your account has been created."})]}):h.jsxs(h.Fragment,{children:[h.jsx(kb,{children:"Join the Pool"}),h.jsxs(Bb,{onSubmit:C,children:[h.jsxs(po,{children:[h.jsx(mo,{children:"Email"}),h.jsx(go,{type:"email",placeholder:"you@example.com",value:f,onChange:$=>d($.target.value),required:!0})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Password"}),h.jsx(go,{type:"password",placeholder:"Create a password",value:p,onChange:$=>m($.target.value),required:!0,minLength:8})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Confirm Password"}),h.jsx(go,{type:"password",placeholder:"Confirm password",value:g,onChange:$=>v($.target.value),required:!0})]}),h.jsx(Nb,{type:"submit",whileHover:{scale:1.01},whileTap:{scale:.99},children:"Create Account"})]}),h.jsxs(Lb,{children:["Already have an account?"," ",h.jsx("button",{type:"button",onClick:D,children:"Log in"})]})]})]})})})},_8=()=>{const{isLoginModalOpen:n,closeLoginModal:a,openSignUpModal:o,playClick:l,playSuccess:c}=Ls(),[f,d]=j.useState(""),[p,m]=j.useState(""),[g,v]=j.useState(!1);j.useEffect(()=>{n||(d(""),m(""),v(!1))},[n]);const x=C=>{C.preventDefault(),c(),v(!0),setTimeout(()=>{a()},2e3)},T=()=>{l(),a(),o()};return h.jsx(en,{children:n&&h.jsx(zb,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:a,children:h.jsxs(Rb,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:C=>C.stopPropagation(),children:[h.jsx(Ob,{onClick:a,children:"×"}),g?h.jsxs(_b,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:[h.jsx(Vb,{}),h.jsx(Ub,{children:"Welcome Back"}),h.jsx(Hb,{children:"Good luck in the next draw."})]}):h.jsxs(h.Fragment,{children:[h.jsx(kb,{children:"Welcome Back"}),h.jsxs(Bb,{onSubmit:x,children:[h.jsxs(po,{children:[h.jsx(mo,{children:"Email"}),h.jsx(go,{type:"email",placeholder:"you@example.com",value:f,onChange:C=>d(C.target.value),required:!0})]}),h.jsxs(po,{children:[h.jsx(mo,{children:"Password"}),h.jsx(go,{type:"password",placeholder:"Enter password",value:p,onChange:C=>m(C.target.value),required:!0})]}),h.jsx(Nb,{type:"submit",whileHover:{scale:1.01},whileTap:{scale:.99},children:"Log In"})]}),h.jsxs(Lb,{children:["New here?"," ",h.jsx("button",{type:"button",onClick:T,children:"Sign up"})]})]})]})})})},Yb=j.createContext(),V8={username:"LuckyMax",avatar:"/moneypools-landing/images/05.png",level:12,memberSince:"Oct 2025",totalWinnings:0,currentPool:1,drawsParticipated:23,drawsWon:0,subscriptionTier:"Pro",nextBilling:"Feb 15, 2026",ticketMultiplier:1,syndicate:null,referralCode:"LUCKYMAX2025"},U8={jackpot:52847,activePlayers:52847,currentDrawNumber:48},H8=[{id:1,text:"You joined Pool #1",time:"2 days ago",type:"join"},{id:2,text:"Draw #47 completed — Player X won €51,203",time:"3 days ago",type:"draw"},{id:3,text:"You received a ticket from Sarah",time:"5 days ago",type:"gift"}],Y8=({children:n})=>{const[a,o]=j.useState(V8),[l,c]=j.useState(U8),[f,d]=j.useState(H8),[p,m]=j.useState([]),[g,v]=j.useState(!1),[x,T]=j.useState(!1),[C,D]=j.useState(!1),[$,R]=j.useState(!1),[N]=j.useState(()=>{const Q=new Date;return Q.setDate(Q.getDate()+2),Q.setHours(20,0,0,0),Q});j.useEffect(()=>{const Q=setInterval(()=>{const U=Math.floor(Math.random()*3)+1;c(F=>({...F,jackpot:F.jackpot+U,activePlayers:F.activePlayers+U}))},3e3);return()=>clearInterval(Q)},[]);const P={player:a,setPlayer:o,pool:l,activity:f,notifications:p,addNotification:Q=>{m(U=>[{id:Date.now(),...Q},...U])},nextDraw:N,calculateOdds:()=>{const Q=l.activePlayers,U=a.ticketMultiplier;return Math.ceil(Q/U)},updateMultiplier:Q=>{o(U=>({...U,ticketMultiplier:Q}))},syndicateModalOpen:g,setSyndicateModalOpen:v,giftModalOpen:x,setGiftModalOpen:T,multiplierModalOpen:C,setMultiplierModalOpen:D,inviteModalOpen:$,setInviteModalOpen:R};return h.jsx(Yb.Provider,{value:P,children:n})},nn=()=>{const n=j.useContext(Yb);if(!n)throw new Error("useDashboard must be used within a DashboardProvider");return n},G8=w.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -1708,13 +1714,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(253, 249, 238, 0.1);
-`,G8=w.nav`
+`,q8=w.nav`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-`,q8=w(Ns)`
+`,X8=w(Ns)`
   display: flex;
   align-items: center;
 
@@ -1726,7 +1732,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
       height: 32px;
     }
   }
-`,X8=w.div`
+`,P8=w.div`
   display: none;
   align-items: center;
   gap: 32px;
@@ -1758,7 +1764,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
       width: 100%;
     }
   }
-`,P8=w.div`
+`,K8=w.div`
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1785,7 +1791,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 20px;
     height: 20px;
   }
-`,K8=w.span`
+`,Q8=w.span`
   position: absolute;
   top: -4px;
   right: -4px;
@@ -1798,13 +1804,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   display: flex;
   align-items: center;
   justify-content: center;
-`,Q8=w.div`
+`,Z8=w.div`
   display: none;
 
   @media (min-width: ${J.tablet}) {
     display: block;
   }
-`,Z8=w(I.button)`
+`,F8=w(I.button)`
   padding: 8px 16px;
   border-radius: 8px;
   background: transparent;
@@ -1820,7 +1826,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     border-color: ${b.red};
     color: ${b.coral};
   }
-`,F8=w.div`
+`,J8=w.div`
   display: none;
   align-items: center;
   gap: 10px;
@@ -1828,23 +1834,23 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: flex;
   }
-`,J8=w.img`
+`,W8=w.img`
   width: 36px;
   height: 36px;
   border-radius: 8px;
   object-fit: cover;
   border: 2px solid ${b.gold};
-`,W8=w.span`
+`,I8=w.span`
   color: ${b.cream};
   font-weight: 600;
   font-size: 14px;
-`,I8=()=>{const n=ir(),{player:a,notifications:o}=nn(),l=o.filter(f=>!f.read).length,c=()=>{n("/")};return h.jsx(Y8,{children:h.jsxs(G8,{children:[h.jsx(q8,{to:"/",children:h.jsx("img",{src:"/moneypools-landing/images/logo_desktop.png",alt:"MoneyPools"})}),h.jsxs(X8,{children:[h.jsx(If,{to:"/dashboard",$active:!0,children:"Dashboard"}),h.jsx(If,{to:"/dashboard",children:"History"}),h.jsx(If,{to:"/dashboard",children:"Syndicate"})]}),h.jsxs(P8,{children:[h.jsx(Q8,{children:h.jsxs(X1,{whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("path",{d:"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"}),h.jsx("path",{d:"M13.73 21a2 2 0 0 1-3.46 0"})]}),l>0&&h.jsx(K8,{children:l})]})}),h.jsx(X1,{whileHover:{scale:1.05},whileTap:{scale:.95},children:h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"12",r:"3"}),h.jsx("path",{d:"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"})]})}),h.jsxs(F8,{children:[h.jsx(J8,{src:a.avatar,alt:a.username}),h.jsx(W8,{children:a.username})]}),h.jsx(Z8,{onClick:c,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Logout"})]})]})})},tM=wt`
+`,tM=()=>{const n=ir(),{player:a,notifications:o}=nn(),l=o.filter(f=>!f.read).length,c=()=>{n("/")};return h.jsx(G8,{children:h.jsxs(q8,{children:[h.jsx(X8,{to:"/",children:h.jsx("img",{src:"/moneypools-landing/images/logo_desktop.png",alt:"MoneyPools"})}),h.jsxs(P8,{children:[h.jsx(If,{to:"/dashboard",$active:!0,children:"Dashboard"}),h.jsx(If,{to:"/dashboard",children:"History"}),h.jsx(If,{to:"/dashboard",children:"Syndicate"})]}),h.jsxs(K8,{children:[h.jsx(Z8,{children:h.jsxs(X1,{whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("path",{d:"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"}),h.jsx("path",{d:"M13.73 21a2 2 0 0 1-3.46 0"})]}),l>0&&h.jsx(Q8,{children:l})]})}),h.jsx(X1,{whileHover:{scale:1.05},whileTap:{scale:.95},children:h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"12",r:"3"}),h.jsx("path",{d:"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"})]})}),h.jsxs(J8,{children:[h.jsx(W8,{src:a.avatar,alt:a.username}),h.jsx(I8,{children:a.username})]}),h.jsx(F8,{onClick:c,whileHover:{scale:1.02},whileTap:{scale:.98},children:"Logout"})]})]})})},eM=wt`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
-`,eM=wt`
+`,nM=wt`
   0%, 100% { box-shadow: 0 0 20px ${b.gold}40; }
   50% { box-shadow: 0 0 40px ${b.gold}60; }
-`,nM=wt`
+`,iM=wt`
   0%, 100% {
     transform: scale(1);
     box-shadow: 0 0 20px ${b.coral}60, 0 0 40px ${b.coral}30;
@@ -1853,16 +1859,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     transform: scale(1.05);
     box-shadow: 0 0 30px ${b.coral}80, 0 0 60px ${b.coral}50;
   }
-`,iM=wt`
+`,aM=wt`
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-`,aM=wt`
+`,rM=wt`
   0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
   50% { opacity: 1; transform: scale(1) rotate(180deg); }
-`,rM=wt`
+`,oM=wt`
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-5px); }
-`,oM=w(I.div)`
+`,lM=w(I.div)`
   background: rgba(253, 249, 238, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(253, 249, 238, 0.1);
@@ -1871,16 +1877,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   display: flex;
   flex-direction: column;
   align-items: center;
-`,lM=w.div`
+`,sM=w.div`
   position: relative;
   margin-bottom: 20px;
-`,sM=w.img`
+`,cM=w.img`
   width: 280px;
   height: 280px;
   border-radius: 28px;
   object-fit: cover;
   border: 5px solid ${b.gold};
-  animation: ${tM} 3s ease-in-out infinite, ${eM} 2s ease-in-out infinite;
+  animation: ${eM} 3s ease-in-out infinite, ${nM} 2s ease-in-out infinite;
   cursor: pointer;
 
   @media (min-width: ${J.tablet}) {
@@ -1895,7 +1901,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 160px;
     height: 160px;
   }
-`,cM=w(I.div)`
+`,uM=w(I.div)`
   position: absolute;
   top: -45px;
   left: 50%;
@@ -1907,7 +1913,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   padding: 8px 16px;
   border-radius: 20px;
   white-space: nowrap;
-  animation: ${rM} 1s ease-in-out infinite;
+  animation: ${oM} 1s ease-in-out infinite;
   box-shadow: 0 4px 15px ${b.gold}50;
   z-index: 10;
 
@@ -1927,7 +1933,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,uM=w.div`
+`,fM=w.div`
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -1939,7 +1945,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   padding: 6px 16px;
   border-radius: 20px;
   box-shadow: 0 4px 15px ${b.gold}50;
-`,fM=w.h2`
+`,dM=w.h2`
   color: ${b.cream};
   font-size: 2rem;
   font-weight: 700;
@@ -1949,7 +1955,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     font-size: 1.5rem;
   }
-`,dM=w.div`
+`,hM=w.div`
   background: ${n=>n.$tier==="Pro"?`linear-gradient(135deg, ${b.gold}, #D4A84B)`:`linear-gradient(135deg, ${b.coral}, ${b.red})`};
   color: ${n=>n.$tier==="Pro"?b.darkBrown:b.cream};
   font-weight: 700;
@@ -1959,7 +1965,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
-`,hM=w.div`
+`,pM=w.div`
   width: 100%;
   display: grid;
   gap: 12px;
@@ -1979,12 +1985,12 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${n=>n.$highlight?b.gold:b.cream};
   font-weight: 600;
   font-size: 14px;
-`,pM=w.div`
+`,mM=w.div`
   width: 100%;
   height: 1px;
   background: rgba(253, 249, 238, 0.1);
   margin: 16px 0;
-`,mM=w(I.button)`
+`,gM=w(I.button)`
   width: 100%;
   padding: 12px;
   background: linear-gradient(135deg, ${b.gold}, #D4A84B);
@@ -1996,14 +2002,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   cursor: pointer;
   margin-top: auto;
   display: ${n=>n.$show?"block":"none"};
-`,gM=w.div`
+`,yM=w.div`
   text-align: center;
   margin-top: 12px;
-`,yM=w.p`
+`,xM=w.p`
   color: ${b.cream};
   opacity: 0.5;
   font-size: 11px;
-`,xM=w(I.div)`
+`,vM=w(I.div)`
   width: 100%;
   background: linear-gradient(135deg, ${b.red}, ${b.coral});
   border-radius: 16px;
@@ -2011,7 +2017,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   margin-bottom: 16px;
   position: relative;
   overflow: hidden;
-  animation: ${nM} 2s ease-in-out infinite;
+  animation: ${iM} 2s ease-in-out infinite;
 
   &::before {
     content: '';
@@ -2021,29 +2027,29 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    animation: ${iM} 2s infinite;
+    animation: ${aM} 2s infinite;
   }
-`,vM=w.div`
+`,bM=w.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   z-index: 1;
-`,bM=w.div`
+`,SM=w.div`
   display: flex;
   flex-direction: column;
-`,SM=w.span`
+`,wM=w.span`
   font-size: 11px;
   color: ${b.cream};
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 4px;
-`,wM=w.span`
+`,TM=w.span`
   font-size: 13px;
   color: ${b.cream};
   font-weight: 600;
-`,TM=w.div`
+`,jM=w.div`
   font-size: 2.5rem;
   font-weight: 900;
   color: ${b.cream};
@@ -2052,14 +2058,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   display: flex;
   align-items: center;
   position: relative;
-`,jM=w.span`
+`,CM=w.span`
   font-size: 1.5rem;
   margin-left: 2px;
   opacity: 0.9;
 `,td=w.span`
   position: absolute;
   font-size: 14px;
-  animation: ${aM} 1.5s ease-in-out infinite;
+  animation: ${rM} 1.5s ease-in-out infinite;
 
   &:nth-child(1) {
     top: -8px;
@@ -2078,11 +2084,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     right: -8px;
     animation-delay: 1s;
   }
-`,CM=w.div`
+`,EM=w.div`
   margin-top: 8px;
   padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-`,EM=w.span`
+`,AM=w.span`
   font-size: 12px;
   color: ${b.cream};
   opacity: 0.9;
@@ -2091,23 +2097,23 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     color: ${b.gold};
     font-weight: 700;
   }
-`,AM=()=>{const{player:n,pool:a,calculateOdds:o}=nn(),[l,c]=j.useState(!0),f=g=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0}).format(g),d=n.ticketMultiplier>1,p=o(),m=()=>{c(!1)};return h.jsxs(oM,{initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.5},children:[h.jsxs(lM,{children:[h.jsx(en,{children:l&&h.jsx(cM,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},exit:{opacity:0,y:-10},transition:{duration:.3},children:"Click me!"})}),h.jsx(sM,{src:n.avatar,alt:n.username,onClick:m}),h.jsxs(uM,{children:["LVL ",n.level]})]}),h.jsx(fM,{children:n.username}),h.jsxs(dM,{$tier:n.subscriptionTier,children:[n.subscriptionTier," Member"]}),d&&h.jsxs(xM,{initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},transition:{type:"spring",stiffness:300,damping:20},children:[h.jsxs(vM,{children:[h.jsxs(bM,{children:[h.jsx(SM,{children:"Active Boost"}),h.jsxs(wM,{children:[n.ticketMultiplier," tickets this draw"]})]}),h.jsxs(TM,{children:[h.jsx(td,{children:"✨"}),h.jsx(td,{children:"⚡"}),h.jsx(td,{children:"✨"}),n.ticketMultiplier,h.jsx(jM,{children:"X"})]})]}),h.jsx(CM,{children:h.jsxs(EM,{children:["Your odds: ",h.jsxs("strong",{children:["1 in ",p.toLocaleString()]})]})})]}),h.jsxs(hM,{children:[h.jsxs(rs,{children:[h.jsx(os,{children:"Member Since"}),h.jsx(ls,{children:n.memberSince})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Total Winnings"}),h.jsx(ls,{$highlight:!0,children:f(n.totalWinnings)})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Draws Entered"}),h.jsx(ls,{children:n.drawsParticipated})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Draws Won"}),h.jsx(ls,{$highlight:!0,children:n.drawsWon})]})]}),h.jsx(pM,{}),h.jsx(mM,{$show:n.subscriptionTier==="Starter",whileHover:{scale:1.02},whileTap:{scale:.98},children:"Upgrade to Pro"}),h.jsx(gM,{children:h.jsxs(yM,{children:["Next billing: ",n.nextBilling]})})]})},MM=wt`
+`,MM=()=>{const{player:n,pool:a,calculateOdds:o}=nn(),[l,c]=j.useState(!0),f=g=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0}).format(g),d=n.ticketMultiplier>1,p=o(),m=()=>{c(!1)};return h.jsxs(lM,{initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.5},children:[h.jsxs(sM,{children:[h.jsx(en,{children:l&&h.jsx(uM,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},exit:{opacity:0,y:-10},transition:{duration:.3},children:"Click me!"})}),h.jsx(cM,{src:n.avatar,alt:n.username,onClick:m}),h.jsxs(fM,{children:["LVL ",n.level]})]}),h.jsx(dM,{children:n.username}),h.jsxs(hM,{$tier:n.subscriptionTier,children:[n.subscriptionTier," Member"]}),d&&h.jsxs(vM,{initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},transition:{type:"spring",stiffness:300,damping:20},children:[h.jsxs(bM,{children:[h.jsxs(SM,{children:[h.jsx(wM,{children:"Active Boost"}),h.jsxs(TM,{children:[n.ticketMultiplier," tickets this draw"]})]}),h.jsxs(jM,{children:[h.jsx(td,{children:"✨"}),h.jsx(td,{children:"⚡"}),h.jsx(td,{children:"✨"}),n.ticketMultiplier,h.jsx(CM,{children:"X"})]})]}),h.jsx(EM,{children:h.jsxs(AM,{children:["Your odds: ",h.jsxs("strong",{children:["1 in ",p.toLocaleString()]})]})})]}),h.jsxs(pM,{children:[h.jsxs(rs,{children:[h.jsx(os,{children:"Member Since"}),h.jsx(ls,{children:n.memberSince})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Total Winnings"}),h.jsx(ls,{$highlight:!0,children:f(n.totalWinnings)})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Draws Entered"}),h.jsx(ls,{children:n.drawsParticipated})]}),h.jsxs(rs,{children:[h.jsx(os,{children:"Draws Won"}),h.jsx(ls,{$highlight:!0,children:n.drawsWon})]})]}),h.jsx(mM,{}),h.jsx(gM,{$show:n.subscriptionTier==="Starter",whileHover:{scale:1.02},whileTap:{scale:.98},children:"Upgrade to Pro"}),h.jsx(yM,{children:h.jsxs(xM,{children:["Next billing: ",n.nextBilling]})})]})},$M=wt`
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-5px); }
-`,$M=wt`
+`,DM=wt`
   0%, 100% {
     text-shadow: 0 0 30px ${b.gold}60, 0 0 60px ${b.gold}30;
   }
   50% {
     text-shadow: 0 0 50px ${b.gold}80, 0 0 100px ${b.gold}50;
   }
-`,DM=wt`
+`,zM=wt`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 `;wt`
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(360deg); }
-`;const zM=wt`
+`;const RM=wt`
   0% {
     transform: translateY(0) rotate(0deg) scale(1);
     opacity: 1;
@@ -2116,25 +2122,25 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     transform: translateY(-400px) rotate(720deg) scale(0);
     opacity: 0;
   }
-`,RM=w.span`
+`,OM=w.span`
   position: absolute;
   font-size: ${n=>n.$size}px;
   color: ${n=>n.$color};
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
-  animation: ${zM} ${n=>n.$duration}s ease-out forwards;
+  animation: ${RM} ${n=>n.$duration}s ease-out forwards;
   left: ${n=>n.$x}%;
   top: ${n=>n.$y}%;
   text-shadow: 0 0 10px ${n=>n.$color};
   pointer-events: none;
   z-index: 10;
-`,OM=wt`
+`,kM=wt`
   0%, 100% { box-shadow: 0 0 30px ${b.gold}50; }
   50% { box-shadow: 0 0 50px ${b.gold}70; }
-`,kM=wt`
+`,BM=wt`
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-`,BM=w(I.div)`
+`,NM=w(I.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2144,7 +2150,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   background: rgba(253, 249, 238, 0.03);
   border: 2px solid ${b.gold};
   border-radius: 20px;
-  animation: ${OM} 2s ease-in-out infinite;
+  animation: ${kM} 2s ease-in-out infinite;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -2156,7 +2162,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     justify-content: center;
     gap: 0;
   }
-`,NM=w(I.div)`
+`,LM=w(I.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2169,9 +2175,9 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   }
 `,Gb=w.div`
   perspective: 1000px;
-  animation: ${DM} 3s ease-in-out infinite;
+  animation: ${zM} 3s ease-in-out infinite;
   position: relative;
-`,LM=w(I.div)`
+`,_M=w(I.div)`
   position: absolute;
   top: -10px;
   left: 50%;
@@ -2183,7 +2189,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   padding: 8px 16px;
   border-radius: 20px;
   white-space: nowrap;
-  animation: ${MM} 1s ease-in-out infinite;
+  animation: ${$M} 1s ease-in-out infinite;
   box-shadow: 0 4px 15px ${b.gold}50;
   z-index: 10;
 
@@ -2203,7 +2209,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,_M=w.h2`
+`,VM=w.h2`
   color: ${b.cream};
   font-size: 1.8rem;
   font-weight: 700;
@@ -2217,7 +2223,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.desktop}) {
     font-size: 2rem;
   }
-`,VM=w.img`
+`,UM=w.img`
   width: 240px;
   height: 240px;
   border-radius: 24px;
@@ -2238,7 +2244,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 500px;
     height: 500px;
   }
-`,UM=w.div`
+`,HM=w.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2250,7 +2256,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     padding-bottom: 10px;
     width: auto;
   }
-`,HM=w.div`
+`,YM=w.div`
   color: ${b.cream};
   font-size: 12px;
   text-transform: uppercase;
@@ -2263,7 +2269,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     letter-spacing: 4px;
     margin-bottom: 8px;
   }
-`,YM=w.div`
+`,GM=w.div`
   font-size: clamp(2.2rem, 12vw, 5rem);
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
@@ -2279,14 +2285,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: ${kM} 3s linear infinite, ${$M} 2s ease-in-out infinite;
+  animation: ${BM} 3s linear infinite, ${DM} 2s ease-in-out infinite;
   line-height: 1;
   margin-bottom: 8px;
 
   @media (min-width: ${J.tablet}) {
     margin-bottom: 24px;
   }
-`,GM=w.div`
+`,qM=w.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -2345,7 +2351,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     letter-spacing: 1px;
     order: 2;
   }
-`,qM=w.div`
+`,XM=w.div`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -2359,7 +2365,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     padding: 8px 20px;
     margin-top: 24px;
   }
-`,XM=w.div`
+`,PM=w.div`
   width: 8px;
   height: 8px;
   background: ${b.coral};
@@ -2370,7 +2376,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.2); }
   }
-`,PM=w.span`
+`,KM=w.span`
   color: ${b.cream};
   font-size: 13px;
   font-weight: 500;
@@ -2378,7 +2384,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     font-size: 14px;
   }
-`,KM=w.div`
+`,QM=w.div`
   background: linear-gradient(135deg, ${b.red}, ${b.coral});
   color: ${b.cream};
   font-size: 11px;
@@ -2391,7 +2397,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     font-size: 12px;
     margin-left: 8px;
   }
-`,P1=["$","€","¥"],K1=[b.gold,b.coral,b.red,"#FFE566"],Q1=()=>{const{pool:n,player:a,calculateOdds:o}=nn(),[l,c]=j.useState(n.jackpot),[f,d]=j.useState(n.activePlayers),[p,m]=j.useState([]),[g,v]=j.useState(!0),x=j.useCallback(()=>{const $=[];for(let R=0;R<60;R++)$.push({id:Date.now()+R,symbol:P1[Math.floor(Math.random()*P1.length)],x:Math.random()*90+5,y:Math.random()*80+10,size:Math.random()*30+20,duration:Math.random()*1.5+2.5,color:K1[Math.floor(Math.random()*K1.length)]});m($),setTimeout(()=>m([]),4500)},[]);j.useEffect(()=>{const R=l,N=f,k=n.jackpot-R,O=n.activePlayers-N,K=Date.now(),P=()=>{const Q=Date.now()-K,U=Math.min(Q/500,1),F=1-Math.pow(1-U,3);c(Math.round(R+k*F)),d(Math.round(N+O*F)),U<1&&requestAnimationFrame(P)};requestAnimationFrame(P)},[n.jackpot,n.activePlayers]);const T=$=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0}).format($),C=$=>$.toLocaleString(),D=o();return h.jsxs(BM,{initial:{opacity:0,scale:.95},animate:{opacity:1,scale:1},transition:{duration:.6,delay:.2},children:[p.map($=>h.jsx(RM,{$x:$.x,$y:$.y,$size:$.size,$duration:$.duration,$color:$.color,children:$.symbol},$.id)),h.jsxs(NM,{initial:{opacity:0,y:-20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.1},children:[h.jsxs(Gb,{onMouseEnter:x,onClick:()=>{v(!1),x()},children:[h.jsx(en,{children:g&&h.jsx(LM,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},exit:{opacity:0,y:-10},transition:{duration:.3},children:"Click me!"})}),h.jsx(VM,{src:a.avatar,alt:a.username})]}),h.jsx(_M,{children:a.username})]}),h.jsxs(UM,{children:[h.jsx(HM,{children:"Current Jackpot"}),h.jsx(YM,{children:T(l)}),h.jsxs(GM,{children:[h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.3},children:[h.jsx(nd,{$color:b.coral,children:C(f)}),h.jsx(id,{children:"Active Players"})]}),h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.4},children:[h.jsxs(nd,{$color:b.gold,children:["1 in ",C(D)]}),h.jsx(id,{children:"Your Odds"})]}),h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.5},children:[h.jsxs(nd,{children:["#",n.currentDrawNumber]}),h.jsx(id,{children:"Draw Number"})]})]}),h.jsxs(qM,{children:[h.jsx(XM,{}),h.jsxs(PM,{children:["You're in Pool #",a.currentPool]}),a.ticketMultiplier>1&&h.jsxs(KM,{children:[a.ticketMultiplier,"x Tickets"]})]})]})]})},QM=wt`
+`,P1=["$","€","¥"],K1=[b.gold,b.coral,b.red,"#FFE566"],Q1=()=>{const{pool:n,player:a,calculateOdds:o}=nn(),[l,c]=j.useState(n.jackpot),[f,d]=j.useState(n.activePlayers),[p,m]=j.useState([]),[g,v]=j.useState(!0),x=j.useCallback(()=>{const $=[];for(let R=0;R<60;R++)$.push({id:Date.now()+R,symbol:P1[Math.floor(Math.random()*P1.length)],x:Math.random()*90+5,y:Math.random()*80+10,size:Math.random()*30+20,duration:Math.random()*1.5+2.5,color:K1[Math.floor(Math.random()*K1.length)]});m($),setTimeout(()=>m([]),4500)},[]);j.useEffect(()=>{const R=l,N=f,k=n.jackpot-R,O=n.activePlayers-N,K=Date.now(),P=()=>{const Q=Date.now()-K,U=Math.min(Q/500,1),F=1-Math.pow(1-U,3);c(Math.round(R+k*F)),d(Math.round(N+O*F)),U<1&&requestAnimationFrame(P)};requestAnimationFrame(P)},[n.jackpot,n.activePlayers]);const T=$=>new Intl.NumberFormat("en-IE",{style:"currency",currency:"EUR",minimumFractionDigits:0}).format($),C=$=>$.toLocaleString(),D=o();return h.jsxs(NM,{initial:{opacity:0,scale:.95},animate:{opacity:1,scale:1},transition:{duration:.6,delay:.2},children:[p.map($=>h.jsx(OM,{$x:$.x,$y:$.y,$size:$.size,$duration:$.duration,$color:$.color,children:$.symbol},$.id)),h.jsxs(LM,{initial:{opacity:0,y:-20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.1},children:[h.jsxs(Gb,{onMouseEnter:x,onClick:()=>{v(!1),x()},children:[h.jsx(en,{children:g&&h.jsx(_M,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},exit:{opacity:0,y:-10},transition:{duration:.3},children:"Click me!"})}),h.jsx(UM,{src:a.avatar,alt:a.username})]}),h.jsx(VM,{children:a.username})]}),h.jsxs(HM,{children:[h.jsx(YM,{children:"Current Jackpot"}),h.jsx(GM,{children:T(l)}),h.jsxs(qM,{children:[h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.3},children:[h.jsx(nd,{$color:b.coral,children:C(f)}),h.jsx(id,{children:"Active Players"})]}),h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.4},children:[h.jsxs(nd,{$color:b.gold,children:["1 in ",C(D)]}),h.jsx(id,{children:"Your Odds"})]}),h.jsxs(ed,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.5},children:[h.jsxs(nd,{children:["#",n.currentDrawNumber]}),h.jsx(id,{children:"Draw Number"})]})]}),h.jsxs(XM,{children:[h.jsx(PM,{}),h.jsxs(KM,{children:["You're in Pool #",a.currentPool]}),a.ticketMultiplier>1&&h.jsxs(QM,{children:[a.ticketMultiplier,"x Tickets"]})]})]})]})},ZM=wt`
   0%, 100% {
     box-shadow: 0 0 20px ${b.red}40;
     border-color: ${b.red}60;
@@ -2400,7 +2406,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     box-shadow: 0 0 40px ${b.red}70;
     border-color: ${b.red};
   }
-`,ZM=w(I.div)`
+`,FM=w(I.div)`
   background: rgba(253, 249, 238, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(253, 249, 238, 0.1);
@@ -2412,16 +2418,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   justify-content: center;
 
   ${n=>n.$urgent&&Ti`
-    animation: ${QM} 1.5s ease-in-out infinite;
+    animation: ${ZM} 1.5s ease-in-out infinite;
   `}
-`,FM=w.div`
+`,JM=w.div`
   color: ${b.cream};
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: 0.7;
   margin-bottom: 20px;
-`,JM=w.div`
+`,WM=w.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -2455,19 +2461,19 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   font-weight: 500;
 `;w.span`
   display: none;
-`;const WM=w.div`
+`;const IM=w.div`
   margin-top: 24px;
   text-align: center;
-`,IM=w.div`
+`,t$=w.div`
   color: ${b.gold};
   font-weight: 700;
   font-size: 17px;
   margin-bottom: 5px;
-`,t$=w.div`
+`,e$=w.div`
   color: ${b.cream};
   opacity: 0.5;
   font-size: 14px;
-`,e$=w(I.div)`
+`,n$=w(I.div)`
   margin-top: 16px;
   padding: 8px 16px;
   background: ${b.red}20;
@@ -2476,7 +2482,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.coral};
   font-size: 12px;
   font-weight: 600;
-`,n$=()=>{const{nextDraw:n,pool:a}=nn(),[o,l]=j.useState({days:0,hours:0,minutes:0,seconds:0}),[c,f]=j.useState(!1);j.useEffect(()=>{const g=()=>{const T=n-new Date;if(T>0){const C=Math.floor(T/864e5),D=Math.floor(T%(1e3*60*60*24)/(1e3*60*60)),$=Math.floor(T%(1e3*60*60)/(1e3*60)),R=Math.floor(T%(1e3*60)/1e3);l({days:C,hours:D,minutes:$,seconds:R})}};g();const v=setInterval(()=>{g(),f(x=>!x)},1e3);return()=>clearInterval(v)},[n]);const d=g=>g.toString().padStart(2,"0"),p=o.days===0&&o.hours<24;o.days*24+o.hours;const m=g=>g.toLocaleDateString("en-IE",{weekday:"short",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});return h.jsxs(ZM,{$urgent:p,initial:{opacity:0,x:20},animate:{opacity:1,x:0},transition:{duration:.5,delay:.3},children:[h.jsx(FM,{children:"Next Draw In"}),h.jsxs(JM,{children:[h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.days)})}),h.jsx(us,{children:"Days"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.hours)})}),h.jsx(us,{children:"Hours"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.minutes)})}),h.jsx(us,{children:"Mins"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.seconds)})}),h.jsx(us,{children:"Secs"})]})]}),h.jsxs(WM,{children:[h.jsxs(IM,{children:["Draw #",a.currentDrawNumber]}),h.jsx(t$,{children:m(n)})]}),p&&h.jsx(e$,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:"Draw closing soon!"})]})},i$=wt`
+`,i$=()=>{const{nextDraw:n,pool:a}=nn(),[o,l]=j.useState({days:0,hours:0,minutes:0,seconds:0}),[c,f]=j.useState(!1);j.useEffect(()=>{const g=()=>{const T=n-new Date;if(T>0){const C=Math.floor(T/864e5),D=Math.floor(T%(1e3*60*60*24)/(1e3*60*60)),$=Math.floor(T%(1e3*60*60)/(1e3*60)),R=Math.floor(T%(1e3*60)/1e3);l({days:C,hours:D,minutes:$,seconds:R})}};g();const v=setInterval(()=>{g(),f(x=>!x)},1e3);return()=>clearInterval(v)},[n]);const d=g=>g.toString().padStart(2,"0"),p=o.days===0&&o.hours<24;o.days*24+o.hours;const m=g=>g.toLocaleDateString("en-IE",{weekday:"short",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"});return h.jsxs(FM,{$urgent:p,initial:{opacity:0,x:20},animate:{opacity:1,x:0},transition:{duration:.5,delay:.3},children:[h.jsx(JM,{children:"Next Draw In"}),h.jsxs(WM,{children:[h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.days)})}),h.jsx(us,{children:"Days"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.hours)})}),h.jsx(us,{children:"Hours"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.minutes)})}),h.jsx(us,{children:"Mins"})]}),h.jsxs(ss,{children:[h.jsx(cs,{$urgent:p,children:h.jsx("span",{children:d(o.seconds)})}),h.jsx(us,{children:"Secs"})]})]}),h.jsxs(IM,{children:[h.jsxs(t$,{children:["Draw #",a.currentDrawNumber]}),h.jsx(e$,{children:m(n)})]}),p&&h.jsx(n$,{initial:{opacity:0,scale:.9},animate:{opacity:1,scale:1},children:"Draw closing soon!"})]})},a$=wt`
   0%, 100% {
     box-shadow: 0 0 10px ${b.gold}, 0 0 20px ${b.gold}80, 0 0 30px ${b.gold}60;
   }
@@ -2513,7 +2519,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   98% {
     transform: rotate(3deg);
   }
-`,a$=w.div`
+`,r$=w.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
@@ -2526,11 +2532,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-`,r$=w.div`
+`,o$=w.div`
   display: flex;
   gap: 12px;
   width: 100%;
-`,o$=w(I.button)`
+`,l$=w(I.button)`
   flex: 1;
   display: flex;
   align-items: center;
@@ -2625,11 +2631,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: block;
   }
-`,l$=w.div`
+`,s$=w.div`
   position: relative;
   display: flex;
   flex-direction: column;
-`,s$=w(I.div)`
+`,c$=w(I.div)`
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -2642,7 +2648,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
-  animation: ${i$} 1.5s ease-in-out infinite;
+  animation: ${a$} 1.5s ease-in-out infinite;
   z-index: 10;
   cursor: pointer;
 
@@ -2660,7 +2666,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     font-size: 10px;
     padding: 8px 12px;
   }
-`,c$=w.span`
+`,u$=w.span`
   margin-left: 8px;
   opacity: 0.7;
   cursor: pointer;
@@ -2668,14 +2674,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   &:hover {
     opacity: 1;
   }
-`,u$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("path",{d:"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),h.jsx("circle",{cx:"9",cy:"7",r:"4"}),h.jsx("path",{d:"M23 21v-2a4 4 0 0 0-3-3.87"}),h.jsx("path",{d:"M16 3.13a4 4 0 0 1 0 7.75"})]}),f$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("polyline",{points:"20 12 20 22 4 22 4 12"}),h.jsx("rect",{x:"2",y:"7",width:"20",height:"5"}),h.jsx("line",{x1:"12",y1:"22",x2:"12",y2:"7"}),h.jsx("path",{d:"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"}),h.jsx("path",{d:"M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"})]}),d$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("rect",{x:"3",y:"3",width:"18",height:"18",rx:"2",ry:"2"}),h.jsx("line",{x1:"9",y1:"9",x2:"15",y2:"15"}),h.jsx("line",{x1:"15",y1:"9",x2:"9",y2:"15"})]}),I1=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("circle",{cx:"18",cy:"5",r:"3"}),h.jsx("circle",{cx:"6",cy:"12",r:"3"}),h.jsx("circle",{cx:"18",cy:"19",r:"3"}),h.jsx("line",{x1:"8.59",y1:"13.51",x2:"15.42",y2:"17.49"}),h.jsx("line",{x1:"15.41",y1:"6.51",x2:"8.59",y2:"10.49"})]}),tx=({isMobile:n=!1})=>{const{player:a,setSyndicateModalOpen:o,setGiftModalOpen:l,setMultiplierModalOpen:c,setInviteModalOpen:f}=nn(),[d,p]=j.useState(!1),m=a.ticketMultiplier>1;j.useEffect(()=>{const x=setTimeout(()=>{p(!0)},5e3);return()=>clearTimeout(x)},[]);const g=()=>{p(!1),f(!0)},v=[{label:"Start Syndicate",description:"Team up with friends",icon:h.jsx(u$,{}),onClick:()=>o(!0),variant:"secondary"},{label:"Gift Ticket",description:"Send to a friend",icon:h.jsx(f$,{}),onClick:()=>l(!0),variant:"secondary"},{label:"Multiplier",description:"Boost your odds",icon:h.jsx(d$,{}),onClick:()=>c(!0),variant:"primary"},{label:"Invite Friends",description:"Multiply your odds",icon:h.jsx(I1,{}),onClick:g,variant:"secondary"}];return n?h.jsx(r$,{children:v.map((x,T)=>{const D=x.label==="Multiplier"&&m;return h.jsx(o$,{$variant:x.variant,$active:D,onClick:x.onClick,whileTap:{scale:.95},initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{delay:.1+T*.05},children:x.icon},x.label)})}):h.jsxs(a$,{children:[v.slice(0,3).map((x,T)=>{const C=x.label==="Multiplier",D=C&&m;return h.jsxs(Z1,{$variant:x.variant,$active:D,onClick:x.onClick,whileHover:{scale:1.02},whileTap:{scale:.98},initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.4+T*.1},children:[h.jsx(F1,{$variant:x.variant,$active:D,children:x.icon}),h.jsx(J1,{$active:D,children:D?"Multiplier Active":C?"Activate Multiplier":x.label}),h.jsx(W1,{$active:D,children:D?"Tap to change":x.description})]},x.label)}),h.jsxs(l$,{children:[h.jsx(en,{children:d&&h.jsxs(s$,{initial:{opacity:0,y:10,x:"-50%"},animate:{opacity:1,y:0,x:"-50%"},exit:{opacity:0,y:-10,x:"-50%"},onClick:g,children:["Increase Winning Chances by up to 10X NOW!",h.jsx(c$,{onClick:x=>{x.stopPropagation(),p(!1)},children:"✕"})]})}),h.jsxs(Z1,{$variant:"secondary",onClick:g,whileHover:{scale:1.02},whileTap:{scale:.98},initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.7},style:{flex:1},children:[h.jsx(F1,{$variant:"secondary",children:h.jsx(I1,{})}),h.jsx(J1,{children:"Invite Friends"}),h.jsx(W1,{children:"Multiply your odds"})]})]})]})},h$=w(I.div)`
+`,f$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("path",{d:"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),h.jsx("circle",{cx:"9",cy:"7",r:"4"}),h.jsx("path",{d:"M23 21v-2a4 4 0 0 0-3-3.87"}),h.jsx("path",{d:"M16 3.13a4 4 0 0 1 0 7.75"})]}),d$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("polyline",{points:"20 12 20 22 4 22 4 12"}),h.jsx("rect",{x:"2",y:"7",width:"20",height:"5"}),h.jsx("line",{x1:"12",y1:"22",x2:"12",y2:"7"}),h.jsx("path",{d:"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"}),h.jsx("path",{d:"M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"})]}),h$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("rect",{x:"3",y:"3",width:"18",height:"18",rx:"2",ry:"2"}),h.jsx("line",{x1:"9",y1:"9",x2:"15",y2:"15"}),h.jsx("line",{x1:"15",y1:"9",x2:"9",y2:"15"})]}),I1=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[h.jsx("circle",{cx:"18",cy:"5",r:"3"}),h.jsx("circle",{cx:"6",cy:"12",r:"3"}),h.jsx("circle",{cx:"18",cy:"19",r:"3"}),h.jsx("line",{x1:"8.59",y1:"13.51",x2:"15.42",y2:"17.49"}),h.jsx("line",{x1:"15.41",y1:"6.51",x2:"8.59",y2:"10.49"})]}),tx=({isMobile:n=!1})=>{const{player:a,setSyndicateModalOpen:o,setGiftModalOpen:l,setMultiplierModalOpen:c,setInviteModalOpen:f}=nn(),[d,p]=j.useState(!1),m=a.ticketMultiplier>1;j.useEffect(()=>{const x=setTimeout(()=>{p(!0)},5e3);return()=>clearTimeout(x)},[]);const g=()=>{p(!1),f(!0)},v=[{label:"Start Syndicate",description:"Team up with friends",icon:h.jsx(f$,{}),onClick:()=>o(!0),variant:"secondary"},{label:"Gift Ticket",description:"Send to a friend",icon:h.jsx(d$,{}),onClick:()=>l(!0),variant:"secondary"},{label:"Multiplier",description:"Boost your odds",icon:h.jsx(h$,{}),onClick:()=>c(!0),variant:"primary"},{label:"Invite Friends",description:"Multiply your odds",icon:h.jsx(I1,{}),onClick:g,variant:"secondary"}];return n?h.jsx(o$,{children:v.map((x,T)=>{const D=x.label==="Multiplier"&&m;return h.jsx(l$,{$variant:x.variant,$active:D,onClick:x.onClick,whileTap:{scale:.95},initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{delay:.1+T*.05},children:x.icon},x.label)})}):h.jsxs(r$,{children:[v.slice(0,3).map((x,T)=>{const C=x.label==="Multiplier",D=C&&m;return h.jsxs(Z1,{$variant:x.variant,$active:D,onClick:x.onClick,whileHover:{scale:1.02},whileTap:{scale:.98},initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.4+T*.1},children:[h.jsx(F1,{$variant:x.variant,$active:D,children:x.icon}),h.jsx(J1,{$active:D,children:D?"Multiplier Active":C?"Activate Multiplier":x.label}),h.jsx(W1,{$active:D,children:D?"Tap to change":x.description})]},x.label)}),h.jsxs(s$,{children:[h.jsx(en,{children:d&&h.jsxs(c$,{initial:{opacity:0,y:10,x:"-50%"},animate:{opacity:1,y:0,x:"-50%"},exit:{opacity:0,y:-10,x:"-50%"},onClick:g,children:["Increase Winning Chances by up to 10X NOW!",h.jsx(u$,{onClick:x=>{x.stopPropagation(),p(!1)},children:"✕"})]})}),h.jsxs(Z1,{$variant:"secondary",onClick:g,whileHover:{scale:1.02},whileTap:{scale:.98},initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.7},style:{flex:1},children:[h.jsx(F1,{$variant:"secondary",children:h.jsx(I1,{})}),h.jsx(J1,{children:"Invite Friends"}),h.jsx(W1,{children:"Multiply your odds"})]})]})]})},p$=w(I.div)`
   background: rgba(253, 249, 238, 0.03);
   border: 1px solid rgba(253, 249, 238, 0.08);
   border-radius: 16px;
   padding: 16px 20px;
   max-height: 280px;
   overflow: hidden;
-`,p$=w(I.div)`
+`,m$=w(I.div)`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2683,7 +2689,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   background: ${n=>n.$isNew?`linear-gradient(135deg, ${b.gold}20, ${b.gold}10)`:"rgba(253, 249, 238, 0.03)"};
   border-radius: 10px;
   border: 1px solid ${n=>n.$isNew?`${b.gold}40`:"rgba(253, 249, 238, 0.05)"};
-`,m$=w.div`
+`,g$=w.div`
   width: 32px;
   height: 32px;
   border-radius: 8px;
@@ -2692,19 +2698,19 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   align-items: center;
   justify-content: center;
   font-size: 16px;
-`,g$=w.div`
+`,y$=w.div`
   flex: 1;
   min-width: 0;
-`,y$=w.p`
+`,x$=w.p`
   color: ${n=>n.$isNew?b.gold:b.cream};
   font-size: 13px;
   font-weight: ${n=>n.$isNew?600:400};
-`,x$=w.span`
+`,v$=w.span`
   color: ${n=>n.$isNew?b.gold:b.cream};
   opacity: ${n=>n.$isNew?.7:.4};
   font-size: 11px;
   white-space: nowrap;
-`,v$=w.h3`
+`,b$=w.h3`
   color: ${b.cream};
   font-size: 12px;
   font-weight: 600;
@@ -2712,11 +2718,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   letter-spacing: 1px;
   opacity: 0.6;
   margin-bottom: 12px;
-`,b$=w.div`
+`,S$=w.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-`,S$=w(I.div)`
+`,w$=w(I.div)`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2724,7 +2730,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   background: rgba(253, 249, 238, 0.03);
   border-radius: 10px;
   border: 1px solid rgba(253, 249, 238, 0.05);
-`,w$=w.div`
+`,T$=w.div`
   width: 32px;
   height: 32px;
   border-radius: 8px;
@@ -2738,21 +2744,21 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     height: 16px;
     color: ${n=>{switch(n.$type){case"join":return b.gold;case"draw":return b.coral;case"gift":return b.red;case"win":return b.gold;default:return b.cream}}};
   }
-`,T$=w.div`
+`,j$=w.div`
   flex: 1;
   min-width: 0;
-`,j$=w.p`
+`,C$=w.p`
   color: ${b.cream};
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`,C$=w.span`
+`,E$=w.span`
   color: ${b.cream};
   opacity: 0.4;
   font-size: 11px;
   white-space: nowrap;
-`,E$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("path",{d:"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),h.jsx("circle",{cx:"8.5",cy:"7",r:"4"}),h.jsx("line",{x1:"20",y1:"8",x2:"20",y2:"14"}),h.jsx("line",{x1:"23",y1:"11",x2:"17",y2:"11"})]}),ex=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"12",r:"10"}),h.jsx("polyline",{points:"12 6 12 12 16 14"})]}),A$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("polyline",{points:"20 12 20 22 4 22 4 12"}),h.jsx("rect",{x:"2",y:"7",width:"20",height:"5"}),h.jsx("line",{x1:"12",y1:"22",x2:"12",y2:"7"}),h.jsx("path",{d:"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"})]}),M$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"8",r:"7"}),h.jsx("polyline",{points:"8.21 13.89 7 23 12 20 17 23 15.79 13.88"})]}),$$=n=>{switch(n){case"join":return h.jsx(E$,{});case"draw":return h.jsx(ex,{});case"gift":return h.jsx(A$,{});case"win":return h.jsx(M$,{});default:return h.jsx(ex,{})}},ad=[{icon:"💬",text:"New message from Sarah!"},{icon:"🎉",text:"James just won €250!"},{icon:"🎁",text:"Emma gifted you a ticket!"},{icon:"👥",text:"Mike invited you to a syndicate!"},{icon:"💰",text:"Lisa won the weekly draw!"},{icon:"🎫",text:"Tom sent you a bonus ticket!"},{icon:"🏆",text:"Your syndicate won €500!"},{icon:"📩",text:"You have 3 unread messages"}],D$=()=>{const{activity:n}=nn(),[a,o]=j.useState([]),[l,c]=j.useState(0);j.useEffect(()=>{const p=setTimeout(()=>{o([{...ad[0],id:Date.now()}])},5e3);return()=>clearTimeout(p)},[]),j.useEffect(()=>{const p=setInterval(()=>{const m=(l+1)%ad.length;c(m),o(g=>[{...ad[m],id:Date.now()},...g])},15e3);return()=>clearInterval(p)},[l]);const f=a.length>0?a[0].id:null,d=[...a.map(p=>({...p,type:"notification",time:"Just now"})),...n].slice(0,6);return h.jsxs(h$,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{delay:.6},children:[h.jsx(v$,{children:"Recent Activity"}),h.jsx(b$,{children:h.jsx(en,{initial:!1,children:d.map((p,m)=>{const g=p.type==="notification"&&p.id===f;return p.type==="notification"?h.jsxs(p$,{$isNew:g,initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{type:"spring",stiffness:300,damping:25},layout:!0,children:[h.jsx(m$,{$isNew:g,children:p.icon}),h.jsx(g$,{children:h.jsx(y$,{$isNew:g,children:p.text})}),h.jsx(x$,{$isNew:g,children:p.time})]},p.id):h.jsxs(S$,{initial:{opacity:0,x:-10},animate:{opacity:1,x:0},transition:{delay:m*.05},layout:!0,children:[h.jsx(w$,{$type:p.type,children:$$(p.type)}),h.jsx(T$,{children:h.jsx(j$,{children:p.text})}),h.jsx(C$,{children:p.time})]},p.id)})})})]})},Qs=w(I.div)`
+`,A$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("path",{d:"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),h.jsx("circle",{cx:"8.5",cy:"7",r:"4"}),h.jsx("line",{x1:"20",y1:"8",x2:"20",y2:"14"}),h.jsx("line",{x1:"23",y1:"11",x2:"17",y2:"11"})]}),ex=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"12",r:"10"}),h.jsx("polyline",{points:"12 6 12 12 16 14"})]}),M$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("polyline",{points:"20 12 20 22 4 22 4 12"}),h.jsx("rect",{x:"2",y:"7",width:"20",height:"5"}),h.jsx("line",{x1:"12",y1:"22",x2:"12",y2:"7"}),h.jsx("path",{d:"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"})]}),$$=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("circle",{cx:"12",cy:"8",r:"7"}),h.jsx("polyline",{points:"8.21 13.89 7 23 12 20 17 23 15.79 13.88"})]}),D$=n=>{switch(n){case"join":return h.jsx(A$,{});case"draw":return h.jsx(ex,{});case"gift":return h.jsx(M$,{});case"win":return h.jsx($$,{});default:return h.jsx(ex,{})}},ad=[{icon:"💬",text:"New message from Sarah!"},{icon:"🎉",text:"James just won €250!"},{icon:"🎁",text:"Emma gifted you a ticket!"},{icon:"👥",text:"Mike invited you to a syndicate!"},{icon:"💰",text:"Lisa won the weekly draw!"},{icon:"🎫",text:"Tom sent you a bonus ticket!"},{icon:"🏆",text:"Your syndicate won €500!"},{icon:"📩",text:"You have 3 unread messages"}],z$=()=>{const{activity:n}=nn(),[a,o]=j.useState([]),[l,c]=j.useState(0);j.useEffect(()=>{const p=setTimeout(()=>{o([{...ad[0],id:Date.now()}])},5e3);return()=>clearTimeout(p)},[]),j.useEffect(()=>{const p=setInterval(()=>{const m=(l+1)%ad.length;c(m),o(g=>[{...ad[m],id:Date.now()},...g])},15e3);return()=>clearInterval(p)},[l]);const f=a.length>0?a[0].id:null,d=[...a.map(p=>({...p,type:"notification",time:"Just now"})),...n].slice(0,6);return h.jsxs(p$,{initial:{opacity:0,y:10},animate:{opacity:1,y:0},transition:{delay:.6},children:[h.jsx(b$,{children:"Recent Activity"}),h.jsx(S$,{children:h.jsx(en,{initial:!1,children:d.map((p,m)=>{const g=p.type==="notification"&&p.id===f;return p.type==="notification"?h.jsxs(m$,{$isNew:g,initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{type:"spring",stiffness:300,damping:25},layout:!0,children:[h.jsx(g$,{$isNew:g,children:p.icon}),h.jsx(y$,{children:h.jsx(x$,{$isNew:g,children:p.text})}),h.jsx(v$,{$isNew:g,children:p.time})]},p.id):h.jsxs(w$,{initial:{opacity:0,x:-10},animate:{opacity:1,x:0},transition:{delay:m*.05},layout:!0,children:[h.jsx(T$,{$type:p.type,children:D$(p.type)}),h.jsx(j$,{children:h.jsx(C$,{children:p.text})}),h.jsx(E$,{children:p.time})]},p.id)})})})]})},Qs=w(I.div)`
   position: fixed;
   inset: 0;
   background: rgba(21, 1, 0, 0.85);
@@ -2822,7 +2828,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     border-color: ${b.gold};
     background: rgba(253, 249, 238, 0.08);
   }
-`,z$=w.textarea`
+`,R$=w.textarea`
   width: 100%;
   padding: 14px 18px;
   background: rgba(253, 249, 238, 0.05);
@@ -2885,9 +2891,9 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.gold};
   font-size: 14px;
   line-height: 1.5;
-`,R$=w.div`
+`,O$=w.div`
   margin: 20px 0;
-`,O$=w.input`
+`,k$=w.input`
   width: 100%;
   height: 8px;
   border-radius: 4px;
@@ -2903,14 +2909,14 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     background: ${b.gold};
     cursor: pointer;
   }
-`,k$=w.div`
+`,B$=w.div`
   text-align: center;
   margin-top: 12px;
-`,B$=w.span`
+`,N$=w.span`
   font-size: 3rem;
   font-weight: 800;
   color: ${b.gold};
-`,N$=w.span`
+`,L$=w.span`
   display: block;
   color: ${b.cream};
   opacity: 0.6;
@@ -2931,13 +2937,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.coral};
   font-size: 1.2rem;
   font-weight: 700;
-`,L$=w.span`
+`,_$=w.span`
   color: ${b.cream};
   opacity: 0.5;
   margin: 0 12px;
-`,_$=w.span`
+`,V$=w.span`
   color: ${b.gold};
-`,V$=w.div`
+`,U$=w.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
@@ -2960,11 +2966,11 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     width: 20px;
     height: 20px;
   }
-`,U$=w.div`
+`,H$=w.div`
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
-`,H$=w.input`
+`,Y$=w.input`
   flex: 1;
   padding: 12px 16px;
   background: rgba(253, 249, 238, 0.05);
@@ -2973,7 +2979,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   color: ${b.gold};
   font-size: 13px;
   font-family: monospace;
-`,Y$=w(I.button)`
+`,G$=w(I.button)`
   padding: 12px 20px;
   background: ${b.gold};
   color: ${b.darkBrown};
@@ -3011,20 +3017,20 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
 `,Fb=w.span`
   color: ${b.cream};
   font-weight: 500;
-`,G$=w.div`
+`,q$=w.div`
   text-align: center;
   margin: 16px 0;
-`,q$=w.span`
+`,X$=w.span`
   font-size: 1.5rem;
   font-weight: 800;
   color: ${b.cream};
-`,X$=w.span`
+`,P$=w.span`
   display: block;
   color: ${b.cream};
   opacity: 0.5;
   font-size: 12px;
   margin-top: 4px;
-`,ec=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("line",{x1:"18",y1:"6",x2:"6",y2:"18"}),h.jsx("line",{x1:"6",y1:"6",x2:"18",y2:"18"})]}),Jb=[{id:1,name:"Sarah_Winner",avatar:"/moneypools-landing/images/01.png"},{id:2,name:"JackpotJoe",avatar:"/moneypools-landing/images/03.png"},{id:3,name:"LuckyLisa",avatar:"/moneypools-landing/images/04.png"}],P$=()=>{const{syndicateModalOpen:n,setSyndicateModalOpen:a,pool:o}=nn(),[l,c]=j.useState("");return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:f=>f.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Start a Syndicate"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Team up with up to 9 friends. If anyone wins, the prize is split equally!"})}),h.jsx(tr,{children:"Syndicate Name"}),h.jsx(nx,{type:"text",placeholder:"e.g., The Lucky Tigers",value:l,onChange:f=>c(f.target.value)}),h.jsx(tr,{children:"Invite Members"}),h.jsx(nx,{type:"text",placeholder:"Search by username..."}),h.jsx(Kb,{children:Jb.map(f=>h.jsxs(Qb,{children:[h.jsx(Zb,{src:f.avatar,alt:f.name}),h.jsx(Fb,{children:f.name})]},f.id))}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Combined Odds (with 3 members)"}),h.jsxs(yo,{children:["1 in ",Math.ceil(o.activePlayers/3).toLocaleString()]})]}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},children:"Create Syndicate"})]})})}):null},K$=()=>{const{giftModalOpen:n,setGiftModalOpen:a}=nn(),[o,l]=j.useState(null),[c,f]=j.useState("");return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:d=>d.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Gift a Ticket"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Send a ticket to a friend and they'll be entered in the next draw!"})}),h.jsx(tr,{children:"Select Friend"}),h.jsx(Kb,{children:Jb.map(d=>h.jsxs(Qb,{$selected:o===d.id,onClick:()=>l(d.id),children:[h.jsx(Zb,{src:d.avatar,alt:d.name}),h.jsx(Fb,{children:d.name})]},d.id))}),h.jsx(tr,{children:"Add a Message (optional)"}),h.jsx(z$,{placeholder:"Good luck! 🍀",value:c,onChange:d=>f(d.target.value)}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},disabled:!o,children:"Send Gift"})]})})}):null},Q$=()=>{const{multiplierModalOpen:n,setMultiplierModalOpen:a,player:o,pool:l,updateMultiplier:c,calculateOdds:f}=nn(),[d,p]=j.useState(o.ticketMultiplier);if(!n)return null;const m=l.activePlayers,g=Math.ceil(m/d),v=(d-1)*7,x=()=>{c(d),a(!1)};return h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:T=>T.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Ticket Multiplier"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"More tickets = better odds! Each ticket is another chance to win."})}),h.jsxs(R$,{children:[h.jsx(O$,{type:"range",min:"1",max:"10",value:d,onChange:T=>p(parseInt(T.target.value))}),h.jsxs(k$,{children:[h.jsx(B$,{children:d}),h.jsx(N$,{children:"tickets this draw"})]})]}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Your Odds"}),h.jsxs(yo,{children:["1 in ",m.toLocaleString(),h.jsx(L$,{children:"→"}),h.jsxs(_$,{children:["1 in ",g.toLocaleString()]})]})]}),v>0&&h.jsxs(G$,{children:[h.jsxs(q$,{children:["€",v]}),h.jsxs(X$,{children:["for ",d-1," extra ticket",d>2?"s":""]})]}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},onClick:x,children:v>0?`Confirm (€${v})`:"Confirm"})]})})})},Z$=()=>{const{inviteModalOpen:n,setInviteModalOpen:a,player:o}=nn(),[l,c]=j.useState(!1),f=`https://moneypools.com/ref/${o.referralCode}`,d=()=>{navigator.clipboard.writeText(f),c(!0),setTimeout(()=>c(!1),2e3)};return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:p=>p.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Invite Friends"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Multiply your winning chances! For each friend you invite, your odds are multiplied for the next 3 draws. Invite 10 friends = 10X winning chances!"})}),h.jsx(tr,{children:"Your Referral Link"}),h.jsxs(U$,{children:[h.jsx(H$,{type:"text",value:f,readOnly:!0}),h.jsx(Y$,{whileHover:{scale:1.02},whileTap:{scale:.98},onClick:d,children:l?"Copied!":"Copy"})]}),h.jsx(tr,{children:"Share via"}),h.jsxs(V$,{children:[h.jsxs(rd,{$bg:"#25D366",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"})}),"WhatsApp"]}),h.jsxs(rd,{$bg:"#0088cc",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"})}),"Telegram"]}),h.jsxs(rd,{$bg:"#1DA1F2",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"})}),"Twitter"]})]}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Your Referral Stats"}),h.jsxs("div",{style:{display:"flex",justifyContent:"space-around",marginTop:12},children:[h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem"},children:"3"}),h.jsx(qa,{children:"Invited"})]}),h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem"},children:"2"}),h.jsx(qa,{children:"Active"})]}),h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem",color:b.gold},children:"€10"}),h.jsx(qa,{children:"Earned"})]})]})]})]})})}):null},F$=w.div`
+`,ec=()=>h.jsxs("svg",{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",children:[h.jsx("line",{x1:"18",y1:"6",x2:"6",y2:"18"}),h.jsx("line",{x1:"6",y1:"6",x2:"18",y2:"18"})]}),Jb=[{id:1,name:"Sarah_Winner",avatar:"/moneypools-landing/images/01.png"},{id:2,name:"JackpotJoe",avatar:"/moneypools-landing/images/03.png"},{id:3,name:"LuckyLisa",avatar:"/moneypools-landing/images/04.png"}],K$=()=>{const{syndicateModalOpen:n,setSyndicateModalOpen:a,pool:o}=nn(),[l,c]=j.useState("");return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:f=>f.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Start a Syndicate"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Team up with up to 9 friends. If anyone wins, the prize is split equally!"})}),h.jsx(tr,{children:"Syndicate Name"}),h.jsx(nx,{type:"text",placeholder:"e.g., The Lucky Tigers",value:l,onChange:f=>c(f.target.value)}),h.jsx(tr,{children:"Invite Members"}),h.jsx(nx,{type:"text",placeholder:"Search by username..."}),h.jsx(Kb,{children:Jb.map(f=>h.jsxs(Qb,{children:[h.jsx(Zb,{src:f.avatar,alt:f.name}),h.jsx(Fb,{children:f.name})]},f.id))}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Combined Odds (with 3 members)"}),h.jsxs(yo,{children:["1 in ",Math.ceil(o.activePlayers/3).toLocaleString()]})]}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},children:"Create Syndicate"})]})})}):null},Q$=()=>{const{giftModalOpen:n,setGiftModalOpen:a}=nn(),[o,l]=j.useState(null),[c,f]=j.useState("");return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:d=>d.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Gift a Ticket"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Send a ticket to a friend and they'll be entered in the next draw!"})}),h.jsx(tr,{children:"Select Friend"}),h.jsx(Kb,{children:Jb.map(d=>h.jsxs(Qb,{$selected:o===d.id,onClick:()=>l(d.id),children:[h.jsx(Zb,{src:d.avatar,alt:d.name}),h.jsx(Fb,{children:d.name})]},d.id))}),h.jsx(tr,{children:"Add a Message (optional)"}),h.jsx(R$,{placeholder:"Good luck! 🍀",value:c,onChange:d=>f(d.target.value)}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},disabled:!o,children:"Send Gift"})]})})}):null},Z$=()=>{const{multiplierModalOpen:n,setMultiplierModalOpen:a,player:o,pool:l,updateMultiplier:c,calculateOdds:f}=nn(),[d,p]=j.useState(o.ticketMultiplier);if(!n)return null;const m=l.activePlayers,g=Math.ceil(m/d),v=(d-1)*7,x=()=>{c(d),a(!1)};return h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:T=>T.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Ticket Multiplier"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"More tickets = better odds! Each ticket is another chance to win."})}),h.jsxs(O$,{children:[h.jsx(k$,{type:"range",min:"1",max:"10",value:d,onChange:T=>p(parseInt(T.target.value))}),h.jsxs(B$,{children:[h.jsx(N$,{children:d}),h.jsx(L$,{children:"tickets this draw"})]})]}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Your Odds"}),h.jsxs(yo,{children:["1 in ",m.toLocaleString(),h.jsx(_$,{children:"→"}),h.jsxs(V$,{children:["1 in ",g.toLocaleString()]})]})]}),v>0&&h.jsxs(q$,{children:[h.jsxs(X$,{children:["€",v]}),h.jsxs(P$,{children:["for ",d-1," extra ticket",d>2?"s":""]})]}),h.jsx(zh,{whileHover:{scale:1.02},whileTap:{scale:.98},onClick:x,children:v>0?`Confirm (€${v})`:"Confirm"})]})})})},F$=()=>{const{inviteModalOpen:n,setInviteModalOpen:a,player:o}=nn(),[l,c]=j.useState(!1),f=`https://moneypools.com/ref/${o.referralCode}`,d=()=>{navigator.clipboard.writeText(f),c(!0),setTimeout(()=>c(!1),2e3)};return n?h.jsx(en,{children:h.jsx(Qs,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},onClick:()=>a(!1),children:h.jsxs(Zs,{initial:{opacity:0,scale:.95,y:20},animate:{opacity:1,scale:1,y:0},exit:{opacity:0,scale:.95,y:20},onClick:p=>p.stopPropagation(),children:[h.jsxs(Fs,{children:[h.jsx(Js,{children:"Invite Friends"}),h.jsx(Ws,{onClick:()=>a(!1),children:h.jsx(ec,{})})]}),h.jsx(Is,{children:h.jsx(tc,{children:"Multiply your winning chances! For each friend you invite, your odds are multiplied for the next 3 draws. Invite 10 friends = 10X winning chances!"})}),h.jsx(tr,{children:"Your Referral Link"}),h.jsxs(H$,{children:[h.jsx(Y$,{type:"text",value:f,readOnly:!0}),h.jsx(G$,{whileHover:{scale:1.02},whileTap:{scale:.98},onClick:d,children:l?"Copied!":"Copy"})]}),h.jsx(tr,{children:"Share via"}),h.jsxs(U$,{children:[h.jsxs(rd,{$bg:"#25D366",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"})}),"WhatsApp"]}),h.jsxs(rd,{$bg:"#0088cc",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"})}),"Telegram"]}),h.jsxs(rd,{$bg:"#1DA1F2",whileHover:{scale:1.05},whileTap:{scale:.95},children:[h.jsx("svg",{viewBox:"0 0 24 24",fill:"currentColor",children:h.jsx("path",{d:"M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"})}),"Twitter"]})]}),h.jsxs(Rh,{children:[h.jsx(qa,{children:"Your Referral Stats"}),h.jsxs("div",{style:{display:"flex",justifyContent:"space-around",marginTop:12},children:[h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem"},children:"3"}),h.jsx(qa,{children:"Invited"})]}),h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem"},children:"2"}),h.jsx(qa,{children:"Active"})]}),h.jsxs("div",{style:{textAlign:"center"},children:[h.jsx(yo,{style:{fontSize:"1.5rem",color:b.gold},children:"€10"}),h.jsx(qa,{children:"Earned"})]})]})]})]})})}):null},J$=w.div`
   min-height: 100vh;
   width: 100%;
   background: ${b.darkBrown};
@@ -3049,7 +3055,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     pointer-events: none;
     z-index: 0;
   }
-`,J$=w.main`
+`,W$=w.main`
   min-height: 100vh;
   padding: 70px 12px 24px;
   max-width: 1600px;
@@ -3067,7 +3073,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.desktop}) {
     padding: 90px 40px 30px;
   }
-`,W$=w.div`
+`,I$=w.div`
   display: none;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -3085,24 +3091,24 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.wide}) {
     grid-template-columns: 300px 1fr 320px;
   }
-`,I$=w.div`
+`,tD=w.div`
   display: none;
 
   @media (min-width: ${J.tablet}) {
     display: block;
   }
-`,tD=w.div`
+`,eD=w.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`,eD=w.div`
+`,nD=w.div`
   display: none;
 
   @media (min-width: ${J.tablet}) {
     display: block;
   }
-`,nD=w.div`
+`,iD=w.div`
   margin-top: 20px;
   display: none;
   flex-direction: column;
@@ -3117,16 +3123,16 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     flex-direction: row;
     gap: 24px;
   }
-`,iD=w.div`
-  flex: 2;
 `,aD=w.div`
+  flex: 2;
+`,rD=w.div`
   flex: 1;
   display: none;
 
   @media (min-width: ${J.desktop}) {
     display: block;
   }
-`,rD=w.div`
+`,oD=w.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -3136,13 +3142,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,oD=w.img`
+`,lD=w.img`
   width: 40px;
   height: 40px;
   border-radius: 10px;
   border: 2px solid ${b.gold};
   flex-shrink: 0;
-`,lD=w.div`
+`,sD=w.div`
   flex: 1;
   display: flex;
   align-items: center;
@@ -3150,19 +3156,19 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   background: rgba(253, 249, 238, 0.05);
   border-radius: 12px;
   padding: 8px 12px;
-`,sD=w.span`
+`,cD=w.span`
   color: ${b.cream};
   font-size: 10px;
   opacity: 0.6;
   margin-right: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
-`,cD=w.span`
+`,uD=w.span`
   color: ${b.gold};
   font-size: 16px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-`,uD=w.div`
+`,fD=w.div`
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -3171,7 +3177,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,fD=w.div`
+`,dD=w.div`
   display: flex;
   gap: 10px;
   padding: 6px 0;
@@ -3182,13 +3188,13 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,dD=w.div`
+`,hD=w.div`
   display: none;
 
   @media (min-width: ${J.tablet}) {
     display: block;
   }
-`,hD=w.div`
+`,pD=w.div`
   position: absolute;
   bottom: 100%;
   right: calc(12.5% - 50px);
@@ -3198,7 +3204,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
   @media (min-width: ${J.tablet}) {
     display: none;
   }
-`,pD=w.div`
+`,mD=w.div`
   position: relative;
   background: linear-gradient(135deg, ${b.gold}, #D4A84B);
   color: ${b.darkBrown};
@@ -3219,4 +3225,4 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     border: 5px solid transparent;
     border-top-color: #D4A84B;
   }
-`,mD=()=>{const[n,a]=j.useState(!0),{setInviteModalOpen:o}=nn(),l=()=>{a(!1),o(!0)};return h.jsxs(F$,{children:[h.jsx(I8,{}),h.jsxs(J$,{children:[h.jsx(gD,{}),h.jsx(uD,{children:h.jsx(Q1,{})}),h.jsxs(fD,{children:[h.jsx(tx,{isMobile:!0}),n&&h.jsx(hD,{children:h.jsx(pD,{onClick:l,children:"Increase Winning Chances!"})})]}),h.jsxs(W$,{children:[h.jsx(I$,{children:h.jsx(AM,{})}),h.jsx(tD,{children:h.jsx(Q1,{})}),h.jsx(eD,{children:h.jsx(dD,{children:h.jsx(n$,{})})})]}),h.jsxs(nD,{children:[h.jsx(iD,{children:h.jsx(tx,{})}),h.jsx(aD,{children:h.jsx(D$,{})})]})]}),h.jsx(P$,{}),h.jsx(K$,{}),h.jsx(Q$,{}),h.jsx(Z$,{})]})},gD=()=>{const{player:n,pool:a}=nn(),[o,l]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const f=new Date;f.setDate(f.getDate()+2),f.setHours(20,0,0,0);const d=()=>{const g=f-new Date;if(g>0){const v=Math.floor(g/36e5),x=Math.floor(g%(1e3*60*60)/(1e3*60)),T=Math.floor(g%(1e3*60)/1e3);l({hours:v,minutes:x,seconds:T})}};d();const p=setInterval(d,1e3);return()=>clearInterval(p)},[]);const c=f=>f.toString().padStart(2,"0");return h.jsxs(rD,{children:[h.jsx(oD,{src:n.avatar,alt:n.username}),h.jsxs(lD,{children:[h.jsx(sD,{children:"Next Draw"}),h.jsxs(cD,{children:[c(o.hours),":",c(o.minutes),":",c(o.seconds)]})]})]})},yD=()=>h.jsx(H8,{children:h.jsx(mD,{})}),xD=()=>h.jsxs(h.Fragment,{children:[h.jsx(i6,{}),h.jsxs("main",{children:[h.jsx(z6,{}),h.jsx(Y6,{}),h.jsx(eA,{}),h.jsx(xA,{}),h.jsx(_A,{}),h.jsx(a8,{}),h.jsx(S8,{})]}),h.jsx(B8,{}),h.jsx(N8,{}),h.jsx(L8,{})]});function vD(){return h.jsx(W3,{basename:"/moneypools-landing",children:h.jsxs(s5,{children:[h.jsx(uT,{}),h.jsxs(M3,{children:[h.jsx(ld,{path:"/",element:h.jsx(xD,{})}),h.jsx(ld,{path:"/dashboard",element:h.jsx(yD,{})})]})]})})}zw.createRoot(document.getElementById("root")).render(h.jsx(j.StrictMode,{children:h.jsx(vD,{})}));
+`,gD=()=>{const[n,a]=j.useState(!0),{setInviteModalOpen:o}=nn(),l=()=>{a(!1),o(!0)};return h.jsxs(J$,{children:[h.jsx(tM,{}),h.jsxs(W$,{children:[h.jsx(yD,{}),h.jsx(fD,{children:h.jsx(Q1,{})}),h.jsxs(dD,{children:[h.jsx(tx,{isMobile:!0}),n&&h.jsx(pD,{children:h.jsx(mD,{onClick:l,children:"Increase Winning Chances!"})})]}),h.jsxs(I$,{children:[h.jsx(tD,{children:h.jsx(MM,{})}),h.jsx(eD,{children:h.jsx(Q1,{})}),h.jsx(nD,{children:h.jsx(hD,{children:h.jsx(i$,{})})})]}),h.jsxs(iD,{children:[h.jsx(aD,{children:h.jsx(tx,{})}),h.jsx(rD,{children:h.jsx(z$,{})})]})]}),h.jsx(K$,{}),h.jsx(Q$,{}),h.jsx(Z$,{}),h.jsx(F$,{})]})},yD=()=>{const{player:n,pool:a}=nn(),[o,l]=j.useState({hours:0,minutes:0,seconds:0});j.useEffect(()=>{const f=new Date;f.setDate(f.getDate()+2),f.setHours(20,0,0,0);const d=()=>{const g=f-new Date;if(g>0){const v=Math.floor(g/36e5),x=Math.floor(g%(1e3*60*60)/(1e3*60)),T=Math.floor(g%(1e3*60)/1e3);l({hours:v,minutes:x,seconds:T})}};d();const p=setInterval(d,1e3);return()=>clearInterval(p)},[]);const c=f=>f.toString().padStart(2,"0");return h.jsxs(oD,{children:[h.jsx(lD,{src:n.avatar,alt:n.username}),h.jsxs(sD,{children:[h.jsx(cD,{children:"Next Draw"}),h.jsxs(uD,{children:[c(o.hours),":",c(o.minutes),":",c(o.seconds)]})]})]})},xD=()=>h.jsx(Y8,{children:h.jsx(gD,{})}),vD=()=>h.jsxs(h.Fragment,{children:[h.jsx(i6,{}),h.jsxs("main",{children:[h.jsx(R6,{}),h.jsx(G6,{}),h.jsx(nA,{}),h.jsx(vA,{}),h.jsx(VA,{}),h.jsx(r8,{}),h.jsx(w8,{})]}),h.jsx(N8,{}),h.jsx(L8,{}),h.jsx(_8,{})]});function bD(){return h.jsx(W3,{basename:"/moneypools-landing",children:h.jsxs(s5,{children:[h.jsx(uT,{}),h.jsxs(M3,{children:[h.jsx(ld,{path:"/",element:h.jsx(vD,{})}),h.jsx(ld,{path:"/dashboard",element:h.jsx(xD,{})})]})]})})}zw.createRoot(document.getElementById("root")).render(h.jsx(j.StrictMode,{children:h.jsx(bD,{})}));

@@ -1,0 +1,13 @@
+export { default as Header } from './Header';
+export { default as Hero } from './Hero';
+export { default as HowItWorks } from './HowItWorks';
+export { default as Jackpot } from './Jackpot';
+export { default as Collectibles } from './Collectibles';
+export { default as Testimonials } from './Testimonials';
+export { default as Pricing } from './Pricing';
+export { default as FinalCTA } from './FinalCTA';
+export { default as Footer } from './Footer';
+export { default as FloatingDollars } from './FloatingDollars';
+export { default as FloatingCollectibles } from './FloatingCollectibles';
+export { default as SoundToggle } from './SoundToggle';
+export { SignUpModal, LoginModal } from './Modal';
